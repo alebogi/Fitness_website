@@ -1,16 +1,80 @@
 body{
 	color:#656565;
 	font-family:'Open Sans', Arial, sans-serif;
-	font-size: 1.4em; 
+	font-size: 1.4em;  
 	background: #272727;
 }
 
 /*============ Header =================== */
 .logo{
-	height: 40px;
-	width: 40px;
+	height: 55px;
+	width: 55px;
+	padding: 0;
+}
+.navbar{
+	padding:0;
+	margin: 0;
+	align-items: center;
+  justify-content: center;
 }
 
+.navbar-brand{
+	padding: 0;
+	border: 0;
+	font-weight: bold;
+	font-size: 1.4em;
+	padding-right: 10px;
+}
+
+.navbar-nav li {
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 55px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+}
+
+.navbar-collapse{
+	padding: 0;
+	margin: 0;
+}
+
+.nav-link{
+	align-items: flex-end;
+	height: 55px;
+}
+
+.nav-item{
+	align-items: center;
+}
+
+.nav-item:hover{
+	
+	margin: 0px;
+	background-color: rgb(171, 33, 23);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.dropdown-menu{
+	color:#656565;
+}
+
+.dropdown-item{
+	color:#9b9898;
+	font-family:'Open Sans', Arial, sans-serif;
+	font-weight: bolder;
+}
+
+.dropdown-item:hover{
+	background-color: rgb(171, 33, 23);
+	color: white;
+}
+
+#inner-headline{
+	background-color:rgb(171, 33, 23);
+	color: white;
+}
 /* ========= Footer ========= */
 
 footer {

@@ -34,9 +34,74 @@
 
 @media screen and (max-width: 600px) {  
     .main-index-txt {
-        font-size: 40px;
+        line-height: 20px;
+        font-size: 15px;
+        top: 50%;
+        left: 20%;
     }
-    .main-index-txt {
-        font-size: 20px;
-    }
+}
+
+.bestOffer{
+	
+    background: rgb(171, 33, 23);
+        
+    padding: 35px 0;
+        
+    color: #f2f2f2;
+}
+
+.card{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 625px;
+}
+
+.card-image{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+    
+}
+
+.img-responsive{
+    max-width: 500px;
+   
+    
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+    padding-right: 20px;
+    margin: 10px;
+
+}
+
+.card-title{
+    /* background-color: rgb(171, 33, 23); */
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+.card-body{
+    color: black;
+}
+
+.card-footer{
+    color:black;
+}
+
+.service{
+	
+    padding: 35px 0;
+    
+    color: #f2f2f2;
+}
+
+#parService{
+    margin: 30px;
+    font-weight: normal;
 }

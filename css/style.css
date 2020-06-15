@@ -89,7 +89,7 @@ html, body {
 /* ========= Footer ========= */
 
 footer {
-    position: fixed;
+   /* position: fixed;*/
     bottom : 0px;
     left: 0px;
     

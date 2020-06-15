@@ -11,8 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/index-script.js"></script>
 </head>
-<body>
+<body onload="refreshBestOffers()">
+
     <div id="wrapper" class="home-page"> 
 
         <!-- Banners -->
@@ -77,7 +79,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12">
-                        <h2 class="breadcrumbs">Početna</h2>
+                        <h2 class="breadcrumbs">Dobrodošli!</h2>
                     </div>
                 </div>
             </div>
@@ -86,9 +88,7 @@
         <section id="indexImg">
                 <div id="main-index-img ">
                         <img src="img/slides/2.jpg" class="img-index"> 
-                        <P class="main-index-txt"> GOCNO</P>
                         <div class="main-index-txt col-sm-12">
-                            
                             <p>Sometimes <br/> </p>
                             <p>    we need to go through <br/> </p>
                             <p>    HELL <br/> </p>
@@ -99,6 +99,81 @@
                 </div>
         </section>  
 
+
+        <div class="container-fluid bestOffer">
+            <div class="row">
+                <div class="col-md-12 justify-content-center text-center">
+                    <h2><b>Najbolje ponude kod nas</b></h2>
+                    <br/> 
+                    U mnoštvu ponuda koje Vam nudimo, izdvajamo Vam treninge sa najvišom ocenom:
+                    <br/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="card small">
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/works/4.jpg" alt="">  
+                                <span class="card-title"  id="bestOfferNo1title">Stott pilates</span>
+                            </div>
+                            <div class="card-body"  id="bestOfferNo1body">
+                                Stott pilates je izuzetno specifičan i sofisticiran način vežbanja pilatesa na originalnim terapeutskim spravama reformerima, koje je osmislio Jozef Pilates.  Uz pomoć STOTT PILATESA očuvaćete gipkost, izdužiti mišiće i što je još važnije imaćete pravilno držanje tela, jer ćete ojačati mišiće koji čine potporu kičmenog stuba.
+                            </div>
+                            <div class="card-footer">
+                                Ocena:
+                                <span  id="bestOfferNo1ocena">5</span>/5
+                            </div>
+                        </div>        
+                </div>
+                <div class="col-md-4 md-margin-bottom-40">
+                        <div class="card small">
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/service2.jpg" alt="">  
+                                <span class="card-title" id="bestOfferNo2title">Crossfit</span>
+                            </div>
+                            <div class="card-body" id="bestOfferNo2body">
+                                Crossfit predstavlja izuzetno intenzivno vežbanje koje uključuje nekoliko različitih treninga. Crossfit će vas učiniti jačim, fit u kratkom vremenskom periodu, toniranim i mišićavim putem različitih tipova treninga. Treninzi su kombinacija kardio vežbi, treninga snage, treninga sa opterećenjima, treninga izdržljivosti i gimnastičkih vežbi.
+                            </div>
+                            <div class="card-footer">
+                                Ocena:
+                                <span  id="bestOfferNo2ocena">5</span>/5
+                            </div>
+                        </div>        
+                </div>
+                <div class="col-md-4 md-margin-bottom-40">
+                    <div class="card small">
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/service3.jpg" alt="">  
+                                <span class="card-title" id="bestOfferNo3title">Hatha yoga</span>
+                            </div>
+                            <div class="card-body" id="bestOfferNo3body">
+                                Kao najrasprostranjeniji vid joge u svetu Hatha se odnosi na praktikovanje joga položaja (asana), vežbi disanja (pranayama) i tehnika opuštanja, tako da se različiti stilovi joge (Ashtanga, Vinyasa, Bikram, power joga…) mogu svrstati pod Hatha jogu.
+                            </div>
+                            <div class="card-footer">
+                                Ocena:
+                                <span  id="bestOfferNo3ocena">5</span>/5
+                            </div>
+                    </div>        
+                </div> 
+            </div>
+        </div>
+
+          
+        <div class="row">
+            <div class="col-md-12 justify-content-center text-center">
+                <div class="service">
+                    <h2><b>PRIDRUŽITE NAM SE!</b></h2>
+                    <br/>
+                    <p id="parService">
+                        Naša misija je da inspirišemo i podstičemo. Da što više ljudi dobije priliku da upozna sopstveno telo, i da sklopi savezništvo sa njim. Da budemo sredstvo za savladavanje najvećeg beogradskog neprijatelja – stresa. Da vežbamo sa vrhunskim profesionalcima, i da vežbamo sa početnicima koji prvi put ulaze u fitnes salu. Da dokažemo da ne postoji osoba koja „nije za fitnes“. Da svaku osobu koja misli „da nije za fitnes“ prigrlimo, i pokažemo joj da nema razloga da sputava sebe.
+                        <br/>
+                        Zato što svako, baš svako zaslužuje da živi u skladu sa sopstvenim telom i zdravljem. Jer je zdravo telo dom zdravih i bistrih misli, a zdrave i bistre misli su put ka kvalitetnijem i srećnijem  životu.
+                    </p>
+                </div>
+                <br/>
+            </div>
+        </div>
 
 
         <footer>
@@ -117,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            </footer>
+        </footer>
     </div>
 </body>
 </html>

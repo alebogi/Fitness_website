@@ -1,0 +1,17 @@
+body{
+    background-image: url("../img/service4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(8px);
+}
+
+.center{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color:rgb(171, 33, 23);
+    text-shadow: 1px 2px 3px white;
+    
+}
+

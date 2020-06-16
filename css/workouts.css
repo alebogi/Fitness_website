@@ -1,9 +1,10 @@
 body{
-    background-image: url("../img/service4.jpg");
+   /* background-image: url("../img/service4.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);*/
+
 }
 
 .center{

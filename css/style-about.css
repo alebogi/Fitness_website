@@ -1,0 +1,106 @@
+.firstRow{
+    margin-top: 30px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.aboutHeader{
+    color: white;
+}
+
+.logoAbout{
+    max-height: 300px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.scndRow{
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.thirdRow{
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.fourthRow{
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.treneri{
+    margin-bottom: 30px;
+}
+
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+.img-tr{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.btn{
+    background-color: rgb(171, 33, 23);
+    color: black;
+}
+
+.btn :hover{
+    color: white;
+}
+
+.btn-href{
+    color: black;
+}
+
+.btn-href :hover{
+    color: white;
+}
+
+.success{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+}
+
+.award{
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 100px;
+}
+
+.awards-img{
+    margin-top:20px;
+}
+
+.mapouter{
+    margin-bottom: 30px;
+}
+
+.contact{
+    padding-top: 30px;
+}
+
+.contactRow{
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.contactRow2{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}

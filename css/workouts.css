@@ -17,6 +17,7 @@
 .card{
     box-shadow: 3px 3px 5px rgba(151, 45, 45, 0.281);
     transition: box-shadow 0.3s ease-in-out;
+    margin-right: 20px;
 }
 
 .card:hover {

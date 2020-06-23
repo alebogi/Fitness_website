@@ -12,8 +12,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/profile-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
-<body>
+<body onload="showBooked()" >
     <div id="wrapper" class="home-page"> 
 
         <!-- Banners -->
@@ -71,12 +74,14 @@
                         </li>
                     </ul>
                     <div class="my-2 my-lg-0 languages" >
+                        
                         <a href="profile.html" onclick="setLanguage('srb')">
                             <img src="img/flag_srb.png" class="flag" alt="srpski">
                         </a>
                         <a href="profile_en.html" onclick="setLanguage('eng')">
                             <img src="img/flag_en.png" class="flag" alt="english">
-                        </a>                    
+                        </a>  
+                        <a href="#" onclick="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>Izloguj se</a>                  
                     </div>
                 </div>
             </nav>
@@ -95,10 +100,58 @@
             </section>
         </header>
 
-       
+        <div class="jumbotron jumbotron-fluid bg-dark text-center">
+            <div class="container">
+                <h1 id="jumbotronTxt">Moj nalog</h1>
+            </div>
+        </div>
 
+       <div class="container-fluid">
+            <div class="row profile-bg">
+               
+                <div class="col-sm-12 col-lg-8 offset-sm-0 offset-lg-2 bg-main main">
+                    <div class="row info">
+                        <div class="col-sm-12 col-md-6 col-lg-6 text-center">
+                            <img src="img/client.jpg" height="250px" width="300px">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 justify-content-left">
+                            <span style="color: white;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp; Informacije</span> <br/>
+                            <table class="table ">
+                                <tr>
+                                    <td>Ime:</td>
+                                    <td>Maja</td>
+                                </tr>
+                                <tr>
+                                    <td>Prezime:</td>
+                                    <td>Vukasović</td>
+                                </tr>
+                                <tr>
+                                    <td>Korisničko ime:</td>
+                                    <td>maja_93</td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail:</td>
+                                    <td>maja@etf.bg.ac.rs</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>   
+                    <div class="row booked">
+                        <h2 style="color: white;">Zakazani treninzi</h2>
+                        <table class="table text-center" id="tableBooked">
+                            <thead>
+                                <th>Trening</th>
+                                <th>Datum</th>
+                                <th>Vreme</th>
+                                <th>Otkazivanje</th>
+                            </thead>
+                        </table>
+                        <span id="mssg" style="color: rgb(171, 33, 23);">Nemate rezervisanih treninga.</span>
+                    </div>
+                </div>
 
-
+            </div>
+       </div>
 
         <footer>
                 
@@ -116,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            </footer>
+        </footer>
     </div>
 </body>
 </html>

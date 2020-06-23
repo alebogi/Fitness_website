@@ -106,15 +106,17 @@ a.dropdown-item.active {
 	text-align: left;
 }
 
-.languages{
-	text-align: justify;
-}
+
 
 .flag{
 	max-width: 40px;
 	max-height: 30px;
 	width: 100%;
     height: auto;
+}
+
+.flag:hover{
+	
 }
 
 /* ========= Footer ========= */

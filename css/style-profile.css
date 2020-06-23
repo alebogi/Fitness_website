@@ -1,0 +1,47 @@
+.profile-bg{
+    background-image: url("../img/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.jumbotron{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#jumbotronTxt{
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bg-main{
+    background-color: transparent;
+}
+
+.main{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    height: max-content;
+    max-height: max-content;
+}
+
+.main img{
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.table{
+    border: 0px;
+    border-top: 0;
+    background-color: transparent;
+    color: white;
+}
+
+.booked{
+    margin-top: 100px;
+}

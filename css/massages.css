@@ -1,0 +1,47 @@
+.center{
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color:rgb(171, 33, 23);
+    text-shadow: 1px 2px 3px white;
+}
+
+.backgr{
+    background-image: url("../img/masage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.card{
+    text-align: center;
+    background-color: wheat;
+}
+
+
+.btn:focus {
+    box-shadow: none;
+  }
+
+.podnaslov{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:white;
+}
+
+.md-form{
+    color:rgb(171, 33, 23);
+  }
+
+  .card{
+    background-color:wheat;
+    font-weight: bold;
+    font-size: 1rem; 
+    color:rgb(70, 70, 70);
+  }
+
+  .para{
+      color:white;
+      font-size: 1.3rem;
+  }

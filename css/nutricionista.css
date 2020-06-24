@@ -16,7 +16,7 @@
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
-    color: rgb(196, 106, 21);
+    color: rgb(255, 255, 255);
     margin-top:15px;
   }
   
@@ -24,4 +24,29 @@
     font-size: 1rem; 
     padding-left: 120px;
     padding-right: 120px;
+    font-weight: bold;
+    color:black;  
   }
+
+  .card{
+    background-color:wheat;
+    font-weight: bold;
+    font-size: 1rem; 
+    color:rgb(70, 70, 70);
+  }
+
+  .md-form{
+    color:rgb(171, 33, 23);
+  }
+
+  .backgr{
+    background-image: url("../img/ntr.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+ 

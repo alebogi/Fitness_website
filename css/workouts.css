@@ -2,7 +2,7 @@
     background-image: url("../img/service4.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position:center;
 }
 
 .center{
@@ -23,3 +23,9 @@
 .card:hover {
     box-shadow: 3px 5px 20px rgb(171, 33, 23);
   }
+
+
+  .btn:focus {
+    box-shadow: none;
+  }
+

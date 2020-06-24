@@ -7,6 +7,8 @@ body{
 	background: #272727;
 	
 	margin-top: 85px;
+	/* margin-bottom: 50px; */
+	
 }
 
 html, body {
@@ -116,18 +118,18 @@ a.dropdown-item.active {
 }
 
 .flag:hover{
-	
+
 }
 
 /* ========= Footer ========= */
 
 footer {
-   /* position: fixed;*/
+    /* position: fixed; */
     bottom : 0px;
     left: 0px;
-    
-   /* margin-top: -100px;
-    clear: both;*/
+	/* margin-top: 50px;
+	z-index: 999; */
+   
     width: 100%;
     text-align: center;
 	background-color: rgb(27, 27, 27);

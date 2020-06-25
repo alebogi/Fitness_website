@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inferno | Usluge</title>
+    <title>Inferno | Joga</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/devil.ico">
-    <link rel="stylesheet" href="css/style-yoga.css">
+    <link rel="stylesheet" href="css/style-workouts-firstPage.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/workouts-firstPage-script.js"></script>
 </head>
 <body >
     <div id="wrapper" class="home-page"> 
@@ -99,25 +100,60 @@
             </section>
         </header>
 
-        <div class="jumbotron jumbotron-fluid bg-serv">
+        <div class="jumbotron jumbotron-fluid bg-top-yoga justify-content-center  d-flex align-items-center">
             <div class="container">
-                <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-center d-flex ">
+                <div class="col-sm-6 col-md-6 col-lg-6 offset-sm-3 offset-md-3 offset-lg-3 justify-content-center text-center txt">
+                    <h1> Joga </h1>
                 </div>
             </div>
         </div>
 
+
         <div class="container-fluid">
-            <div class="row text-center">
-               <div class="col-sm-12 col-lg-12">
-                    <h1 id="hdr">Joga</h1>
+            <div class="row text-center tr">
+               <div class="col-sm-12 col-lg-12 bg-main">
+                   <div class="row btns">
+                        <div class=" col-sm-12 col-md-12 col-lg-4 text-right">
+                            <button type="button" class="btn" onclick="sortByName()">Sortiraj po imenu</button>
+                        </div>
+                        <div class=" col-sm-12 col-md-12 col-lg-4 text-center">
+                            <button type="button" class="btn " onclick="sortByDuration()">Sortiraj po trajanju</button>
+                        </div>
+                        <div class=" col-sm-12 col-md-12 col-lg-4 text-left">
+                            <button type="button" class="btn " onclick="sortByLvl()">Sortiraj po težini</button>
+                        </div>
+                        
+                    </div>
+                    <hr/>
+                    <div class="row  offset-lg-2 ">
+                        <div class="col-sm-12 col-md-12 col-lg-8  tr1  mar">
+                            <img src="img/works/yoga/hatha.png"  class="image">
+                            <div class="middle">
+                              <div class="text" id="tr1"><button type="button" class="btn1" onclick="link('yoga-raja.html')">Radža joga</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  offset-lg-2">
+                        <div class="col-sm-12 col-md-12 col-lg-8 tr2 mar">
+                            <img src="img/works/yoga/1.jpg"  class="image">
+                            <div class="middle">
+                              <div class="text" id="tr2" ><button type="button" class="btn1" onclick="link('yoga-hatha.html')">Hatha joga</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row  offset-lg-2">
+                        <div class="col-sm-12 col-md-12 col-lg-8 tr3 mar">
+                            <img src="img/works/yoga/6 - Copy.jpg"  class="image">
+                            <div class="middle">
+                              <div class="text" id="tr3"><button type="button" class="btn1"  onclick="link('yoga-ashtanga.html')">Aštanga joga</button></div>
+                            </div>
+                        </div>
+                    </div>
                </div>
             </div>
         </div>
 
         
-
-
-
 
         <footer>
                 

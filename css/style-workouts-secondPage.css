@@ -1,0 +1,82 @@
+.bg-top-crossfit1{
+    background-image: url("../img/works/cardio/cros1.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-position: center; 
+    position: relative;
+    z-index: 0;
+    height: 500px;
+    width: auto;
+
+    margin: 0px;
+}
+
+.bg-top-crossfit2{
+    background-image: url("../img/works/cardio/cros2.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-position: center; 
+    position: relative;
+    z-index: 0;
+    height: 500px;
+    width: auto;
+
+    margin: 0px;
+}
+
+.bg-top-crossfit3{
+    background-image: url("../img/works/cardio/cros3.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-position: center; 
+    position: relative;
+    z-index: 0;
+    height: 500px;
+    width: auto;
+    margin: 0px;
+}
+
+
+.txt {
+    font-weight: 300;
+    font-size: 150px;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.bg-ispod{
+    background-color: rgb(171, 33, 23);;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+    background-position: center; 
+    position: relative;
+    z-index: 0;
+    height: 500px;
+    width: auto;
+
+    margin: 0px;
+}
+
+.backgr{
+    background-image: url("../img/drvo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    width:auto;
+    height:auto;
+}
+
+.txt2 {
+    font-weight: 300;
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-right: 150px;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}

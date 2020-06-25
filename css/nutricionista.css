@@ -25,7 +25,17 @@
     padding-left: 120px;
     padding-right: 120px;
     font-weight: bold;
+    background-color: wheat;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid brown;
+    transition: 0.3s;
     color:black;  
+  }
+
+  .tekst:hover{
+      transform: scale(1.05);
   }
 
   .card{
@@ -44,6 +54,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position:center;
+    width:auto;
+    height:auto;
 }
 
 .btn:focus {

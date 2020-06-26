@@ -1,0 +1,44 @@
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+.bg-top{
+    background-image: url("../img/bg1.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    
+    z-index: 0;
+    height: 500px;
+    width: auto;
+
+    margin: 0px;
+}
+
+.btn{
+    color: white;
+    background-color: transparent;
+    border-color: rgb(171, 33, 23);
+    border-width: 2px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: rgb(171, 33, 23);
+}
+.txt {
+   
+    font-weight: 300;
+    font-size: 150px;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.opis{
+    margin: 30px;
+    color: white;
+}

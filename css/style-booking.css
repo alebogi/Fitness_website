@@ -64,3 +64,7 @@ table th{
     margin-bottom: 20px;
 }
 
+#reserveTable td{
+    color: white;
+    margin-right: 30px;
+}

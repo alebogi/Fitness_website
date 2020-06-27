@@ -43,3 +43,24 @@
     margin: 30px;
     color: white;
 }
+
+th{
+    color: black;
+}
+
+.radiobtns{
+    margin-left: 20px;
+}
+
+table{
+    color: white;
+}
+
+table th{
+    color: rgb(171, 33, 23);
+}
+
+.column{
+    margin-bottom: 20px;
+}
+

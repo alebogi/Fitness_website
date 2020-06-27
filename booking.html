@@ -107,15 +107,16 @@
         <div class="container-fluid">
             <div class="row btns">
                 <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-                    <button type="button" class="btn"><a href="#forma">Zakažite trening</a></button>
+                    <button type="button" class="btn"><a href="#reservation">Zakažite trening</a></button>
                 </div>
             </div>
             <div class="row opis">
                 Treninzi počinju na pun sat i traju 1.5h kako bi se izbegle gužve između grupa u svlačionicama. <br/>
-                Molimo Vas da zakažete trening na koji planirate da dođete, kao i da ne kasnite na isti. <br/>
+                Molimo Vas da zakažete trening na koji planirate da dođete, kao i da ne kasnite na isti. U slučaju da ste zakazali trening, a predomislili ste se - otkažite ga.  <br/>
                 Za trening su obavezni oprema, patike i peškir. <br/>
-                <br/>
-                Raspored treninga:
+            </div>
+            <div class="row opis">
+                <h2>Raspored treninga:</h2>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 table-responsive">
@@ -163,11 +164,11 @@
                             <th>14h-15.30h</th>
                             <td><a href=""></a></td>
                             <td><a href=""></a></td>
-                            <td><a href="core-circular.html">Circuit-core</a></td>
+                            <td><a href="core-circuit.html">Circuit-core</a></td>
                             <td><a href=""></a></td>
-                            <td><a href="core-circular.html">Circuit-core</a></td>
+                            <td><a href="core-circuit.html">Circuit-core</a></td>
                             <td><a href=""></a></td>
-                            <td><a href="core-circular.html">Circuit-core</a></td>
+                            <td><a href="core-circuit.html">Circuit-core</a></td>
                         </tr>
                         <tr>
                             <th>16h-17.30h</th>
@@ -200,6 +201,53 @@
                             <td><a href=""></a></td>
                         </tr>
                     </table>
+                </div>
+            </div>
+            <div class="row opis text-center justify-content-center">
+                <h2 style="color: rgb(171, 33, 23);" id="reservation">Rezervacija:</h2>
+            </div>
+            <div class="row opis">
+                <div class="col-sm-12 col-md-12 col-lg-4 column">
+                   <form name="tipForm">
+                        Izaberite tip treninga: <br/>
+                        <div class="radiobtns">   
+                            <input type="radio" name="tip" value="yoga" class="tip"> Joga <br/>
+                            <input type="radio" name="tip" value="pilates" class="tip"> Pilates <br/>
+                            <input type="radio" name="tip" value="core" class="tip"> Core <br/>
+                            <input type="radio" name="tip" value="cardio" class="tip"> Cardio <br/>
+                        </div>
+                   </form>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 column">
+                    Izaberite trening: <br/>
+                    <form name="podtipForm">
+                        <div class="radiobtns" id="tr-dynamic">      
+                            <input type="radio" name="podtip" value="yoga-hatha" id="podtip1" class="podtip yoga"> Hatha joga <br/>
+                            <input type="radio" name="podtip" value="yoga-ashtanga" id="podtip2" class="podtip yoga"> Aštanga joga <br/>
+                            <input type="radio" name="podtip" value="yoga-raja" id="podtip3" class="podtip yoga"> Radža joga <br/>
+                            <input type="radio" name="podtip" value="pilates-classic" id="podtip4" class="podtip pilates"> Klasični pilates <br/>
+                            <input type="radio" name="podtip" value="pilates-stot" id="podtip5" class="podtip pilates"> Stot pilates <br/>
+                            <input type="radio" name="podtip" value="pilates-reformer" id="podtip6" class="podtip pilates"> Reformer pilates <br/>
+                            <input type="radio" name="podtip" value="cardio-hiit" id="podtip7" class="podtip cardio"> HIIT-cardio <br/>
+                            <input type="radio" name="podtip" value="cardio-cardiobox" id="podtip8" class="podtip cardio"> Cardio box <br/>
+                            <input type="radio" name="podtip" value="cardio-crossfit" id="podtip9" class="podtip cardio"> Crossfit-cardio <br/>
+                            <input type="radio" name="podtip" value="core-plyometrics" id="podtip10" class="podtip core"> Plyometrics-core <br/>
+                            <input type="radio" name="podtip" value="core-sixpack" id="podtip11" class="podtip core"> Six pack-core <br/>
+                            <input type="radio" name="podtip" value="core-circuit" id="podtip12" class="podtip core"> Circuit-core <br/>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 column">
+                    Termini i broj slobodnih mesta:
+                    <table class="table" id="reserveTable">
+                        <thead>
+                            <th>Datum</th>
+                            <th>Vreme</th>
+                            <th>Broj mesta</th>
+                            <th>Rezervacija</th>
+                        </thead>
+                    </table>
+                    <span id="table-empty">Ništa nije odabrano.</span>
                 </div>
             </div>
         </div>

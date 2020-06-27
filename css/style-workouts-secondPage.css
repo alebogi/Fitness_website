@@ -2,7 +2,7 @@
     background-image: url("../img/works/cardio/cros1.jpg");
     background-size: cover ;
     background-repeat: no-repeat;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     background-position: center; 
     position: relative;
     z-index: 0;
@@ -16,7 +16,7 @@
     background-image: url("../img/works/cardio/cros2.jpg");
     background-size: cover ;
     background-repeat: no-repeat;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     background-position: center; 
     position: relative;
     z-index: 0;
@@ -30,7 +30,7 @@
     background-image: url("../img/works/cardio/cros3.jpg");
     background-size: cover ;
     background-repeat: no-repeat;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     background-position: center; 
     position: relative;
     z-index: 0;
@@ -52,7 +52,7 @@
     background-color: rgb(171, 33, 23);;
     background-size: cover ;
     background-repeat: no-repeat;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 15% 100%);
     background-position: center; 
     position: relative;
     z-index: 0;
@@ -120,3 +120,112 @@
      content: "\2605";
      position: absolute;
   }
+
+.ugl, .ugl1, .ugl2 {
+    width: 100%;
+}
+
+.naslov{
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid rgb(171, 33, 23);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid rgb(171, 33, 23);;; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:rgb(171, 33, 23);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+hr{
+    border: 1px solid rgb(171, 33, 23);
+}
+
+.user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted rgb(171, 33, 23);
+
+}
+.container.moje{
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+   
+
+
+

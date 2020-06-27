@@ -14,7 +14,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/booking-script.js"></script>
 </head>
-<body>
+<body onload="initLocalStorage()">
     <div id="wrapper" class="home-page"> 
 
         <!-- Banners -->
@@ -213,8 +213,8 @@
                         <div class="radiobtns">   
                             <input type="radio" name="tip" value="yoga" class="tip"> Joga <br/>
                             <input type="radio" name="tip" value="pilates" class="tip"> Pilates <br/>
-                            <input type="radio" name="tip" value="core" class="tip"> Core <br/>
                             <input type="radio" name="tip" value="cardio" class="tip"> Cardio <br/>
+                            <input type="radio" name="tip" value="core" class="tip"> Core <br/>
                         </div>
                    </form>
                 </div>
@@ -222,24 +222,24 @@
                     Izaberite trening: <br/>
                     <form name="podtipForm">
                         <div class="radiobtns" id="tr-dynamic">      
-                            <input type="radio" name="podtip" value="yoga-hatha" id="podtip1" class="podtip yoga"> Hatha joga <br/>
-                            <input type="radio" name="podtip" value="yoga-ashtanga" id="podtip2" class="podtip yoga"> Aštanga joga <br/>
-                            <input type="radio" name="podtip" value="yoga-raja" id="podtip3" class="podtip yoga"> Radža joga <br/>
-                            <input type="radio" name="podtip" value="pilates-classic" id="podtip4" class="podtip pilates"> Klasični pilates <br/>
-                            <input type="radio" name="podtip" value="pilates-stot" id="podtip5" class="podtip pilates"> Stot pilates <br/>
-                            <input type="radio" name="podtip" value="pilates-reformer" id="podtip6" class="podtip pilates"> Reformer pilates <br/>
-                            <input type="radio" name="podtip" value="cardio-hiit" id="podtip7" class="podtip cardio"> HIIT-cardio <br/>
-                            <input type="radio" name="podtip" value="cardio-cardiobox" id="podtip8" class="podtip cardio"> Cardio box <br/>
-                            <input type="radio" name="podtip" value="cardio-crossfit" id="podtip9" class="podtip cardio"> Crossfit-cardio <br/>
-                            <input type="radio" name="podtip" value="core-plyometrics" id="podtip10" class="podtip core"> Plyometrics-core <br/>
-                            <input type="radio" name="podtip" value="core-sixpack" id="podtip11" class="podtip core"> Six pack-core <br/>
-                            <input type="radio" name="podtip" value="core-circuit" id="podtip12" class="podtip core"> Circuit-core <br/>
+                            <input type="radio" name="podtip" value="yoga-hatha" id="podtip1" class="podtip yoga" onclick="showTable(this.value)"> Hatha joga <br/>
+                            <input type="radio" name="podtip" value="yoga-ashtanga" id="podtip2" class="podtip yoga" onclick="showTable(this.value)"> Aštanga joga <br/>
+                            <input type="radio" name="podtip" value="yoga-raja" id="podtip3" class="podtip yoga" onclick="showTable(this.value)"> Radža joga <br/>
+                            <input type="radio" name="podtip" value="pilates-classic" id="podtip4" class="podtip pilates" onclick="showTable(this.value)"> Klasični pilates <br/>
+                            <input type="radio" name="podtip" value="pilates-stot" id="podtip5" class="podtip pilates" onclick="showTable(this.value)"> Stot pilates <br/>
+                            <input type="radio" name="podtip" value="pilates-reformer" id="podtip6" class="podtip pilates" onclick="showTable(this.value)"> Reformer pilates <br/>
+                            <input type="radio" name="podtip" value="cardio-hiit" id="podtip7" class="podtip cardio" onclick="showTable(this.value)"> HIIT-cardio <br/>
+                            <input type="radio" name="podtip" value="cardio-cardiobox" id="podtip8" class="podtip cardio" onclick="showTable(this.value)"> Cardio box <br/>
+                            <input type="radio" name="podtip" value="cardio-crossfit" id="podtip9" class="podtip cardio" onclick="showTable(this.value)"> Crossfit-cardio <br/>
+                            <input type="radio" name="podtip" value="core-plyometrics" id="podtip10" class="podtip core" onclick="showTable(this.value)"> Plyometrics-core <br/>
+                            <input type="radio" name="podtip" value="core-sixpack" id="podtip11" class="podtip core" onclick="showTable(this.value)"> Six pack-core <br/>
+                            <input type="radio" name="podtip" value="core-circuit" id="podtip12" class="podtip core" onclick="showTable(this.value)"> Circuit-core <br/>
                         </div>
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4 column">
                     Termini i broj slobodnih mesta:
-                    <table class="table" id="reserveTable">
+                    <table class="table text-center" id="reserveTable">
                         <thead>
                             <th>Datum</th>
                             <th>Vreme</th>

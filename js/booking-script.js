@@ -12,13 +12,15 @@ var yoga = [
             {
                 dan:"Pon",
                 vreme_pocetak:"08:00",
-                vreme_kraj: "09:30"
+                vreme_kraj: "09:30",
+                slobodno: "20"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"08:00",
-                vreme_kraj: "09:30"
+                vreme_kraj: "09:30",
+                slobodno: "20"
             }
         ]
     }, 
@@ -31,13 +33,15 @@ var yoga = [
             {
                 dan:"Uto",
                 vreme_pocetak:"12:00",
-                vreme_kraj: "13:30"
+                vreme_kraj: "13:30",
+                slobodno: "15"
             }, 
 
             {
                 dan:"Sub",
                 vreme_pocetak:"12:00",
-                vreme_kraj: "13:30"
+                vreme_kraj: "13:30",
+                slobodno: "15"
             }
         ]
     }, 
@@ -50,13 +54,15 @@ var yoga = [
             {
                 dan:"Sre",
                 vreme_pocetak:"08:00",
-                vreme_kraj: "09:30"
+                vreme_kraj: "09:30",
+                slobodno: "20"
             }, 
 
             {
                 dan:"Ned",
                 vreme_pocetak:"08:00",
-                vreme_kraj: "09:30"
+                vreme_kraj: "09:30",
+                slobodno: "20"
             }
         ]
     }
@@ -72,13 +78,15 @@ var pilates = [
             {
                 dan:"Uto",
                 vreme_pocetak:"10:00",
-                vreme_kraj: "11:30"
+                vreme_kraj: "11:30",
+                slobodno: "25"
             }, 
 
             {
                 dan:"Čet",
                 vreme_pocetak:"10:00",
-                vreme_kraj: "11:30"
+                vreme_kraj: "11:30",
+                slobodno: "25"
             }
         ]
     }, 
@@ -91,13 +99,15 @@ var pilates = [
             {
                 dan:"Čet",
                 vreme_pocetak:"12:00",
-                vreme_kraj: "13:30"
+                vreme_kraj: "13:30",
+                slobodno: "18"
             }, 
 
             {
                 dan:"Ned",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "18"
             }
         ]
     }, 
@@ -110,13 +120,15 @@ var pilates = [
             {
                 dan:"Pon",
                 vreme_pocetak:"12:00",
-                vreme_kraj: "13:30"
+                vreme_kraj: "13:30",
+                slobodno: "20"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"12:00",
-                vreme_kraj: "13:30"
+                vreme_kraj: "13:30",
+                slobodno: "20"
             }
         ]
     }
@@ -132,19 +144,22 @@ var cardio = [
             {
                 dan:"Pon",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "23"
             }, 
 
             {
                 dan:"Sre",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "23"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "23"
             }
         ]
     }, 
@@ -157,19 +172,22 @@ var cardio = [
             {
                 dan:"Pon",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }, 
 
             {
                 dan:"Sre",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }
         ]
     }, 
@@ -182,19 +200,22 @@ var cardio = [
             {
                 dan:"Uto",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "10"
             }, 
 
             {
                 dan:"Čet",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "10"
             }, 
 
             {
                 dan:"Sub",
                 vreme_pocetak:"16:00",
-                vreme_kraj: "17:30"
+                vreme_kraj: "17:30",
+                slobodno: "10"
             }
         ]
     }
@@ -210,19 +231,22 @@ var core = [
             {
                 dan:"Pon",
                 vreme_pocetak:"20:00",
-                vreme_kraj: "21:30"
+                vreme_kraj: "21:30",
+                slobodno: "20"
             }, 
 
             {
                 dan:"Sre",
                 vreme_pocetak:"20:00",
-                vreme_kraj: "21:30"
+                vreme_kraj: "21:30",
+                slobodno: "20"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"20:00",
-                vreme_kraj: "21:30"
+                vreme_kraj: "21:30",
+                slobodno: "20"
             }
         ]
     }, 
@@ -235,19 +259,22 @@ var core = [
             {
                 dan:"Uto",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }, 
 
             {
                 dan:"Čet",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }, 
 
             {
                 dan:"Sub",
                 vreme_pocetak:"18:00",
-                vreme_kraj: "19:30"
+                vreme_kraj: "19:30",
+                slobodno: "15"
             }
         ]
     }, 
@@ -260,19 +287,22 @@ var core = [
             {
                 dan:"Sre",
                 vreme_pocetak:"14:00",
-                vreme_kraj: "15:30"
+                vreme_kraj: "15:30",
+                slobodno: "5"
             }, 
 
             {
                 dan:"Pet",
                 vreme_pocetak:"14:00",
-                vreme_kraj: "15:30"
+                vreme_kraj: "15:30",
+                slobodno: "5"
             }, 
 
             {
                 dan:"Ned",
                 vreme_pocetak:"14:00",
-                vreme_kraj: "15:30"
+                vreme_kraj: "15:30",
+                slobodno: "5"
             }
         ]
     }
@@ -280,12 +310,19 @@ var core = [
 
 //-------------------------------------------------------------------------------------------------
 
-function initLocalStorage(){
-    localStorage.setItem("yoga", JSON.stringify(yoga));
-    localStorage.setItem("pilates", JSON.stringify(pilates));
-    localStorage.setItem("cardio", JSON.stringify(cardio));
-    localStorage.setItem("core", JSON.stringify(core));
+function initLocalStorage(){ 
+    //ako prvi put ulazimo na sajt
+    if (localStorage.getItem("firstVisit") == null){
+        localStorage.setItem("firstVisit", 1);
+
+        localStorage.setItem("yoga", JSON.stringify(yoga));
+        localStorage.setItem("pilates", JSON.stringify(pilates));
+        localStorage.setItem("cardio", JSON.stringify(cardio));
+        localStorage.setItem("core", JSON.stringify(core));
+    }
+
 }
+
 
 //-------------------------------------- jQUERY ---------------------------------------------------
 
@@ -297,6 +334,8 @@ $(document).ready(function(){
             showPodtip(val);
         }
     });
+
+    
 
 });
 
@@ -310,45 +349,6 @@ function showPodtip(className){
     var obj1 = new Object(); var obj2 = new Object(); var obj3 = new Object();
 
     var field = document.getElementById("tr-dynamic");
-
-    // var btn1 = document.createElement("input");
-    // btn1.type = "radio";
-    // btn1.className = "podtip yoga"; // set the CSS class
-    // btn1.value = "yoga-hatha";
-    // btn1.name = "podtip";
-    // btn1.id = "hatha"
-    // field.appendChild(btn1); // put it into the DOM
-
-    // var label1 = document.createElement("label");
-    // label1.htmlFor = "hatha";
-    // label1.innerText = "Hatha joga";
-    // field.appendChild(label1);
-
-    // var btn2 = document.createElement("input");
-    // btn2.type = "radio";
-    // btn2.className = "podtip yoga"; // set the CSS class
-    // btn2.value = "yoga-ashtanga";
-    // btn2.name = "podtip";
-    // btn2.id = "ashtanga";
-    // field.appendChild(btn2); // put it into the DOM
-
-    // var label2 = document.createElement("label");
-    // label2.htmlFor = "ashtanga";
-    // label2.innerText = "Ashtanga joga";
-    // field.appendChild(label2);
-
-    // var btn3 = document.createElement("input");
-    // btn3.type = "radio";
-    // btn3.className = "podtip yoga"; // set the CSS class
-    // btn3.value = "yoga-raja";
-    // btn3.name = "podtip";
-    // btn3.id = "raja";
-    // field.appendChild(btn3); // put it into the DOM
-
-    // var label3 = document.createElement("label");
-    // label3.htmlFor = "raja";
-    // label3.innerText = "Radza joga";
-    // field.appendChild(label3);
 
     switch(className){
         case "yoga": 
@@ -386,8 +386,10 @@ function showPodtip(className){
 }
 
 function showTable(id_tr){
+    
     var tr_tip = id_tr.substr(0, id_tr.indexOf('-'));  
 
+    //uzimam odgovarajuci tip treninga
     var tr_obj_niz = JSON.parse(localStorage.getItem(tr_tip));
     var tr_obj;
 
@@ -431,20 +433,89 @@ function showTable(id_tr){
 
                 //slobodna mesta
                 td = $("<td></td>");
-                td.append("8");
+                td.append(termin.slobodno);
                 tr.append(td);
 
                 //dugme za rezervaciju
                 td = $("<td></td>");
-                td.append("<button type='button'>dugme</button>");
+                if (termin.slobodno > 0){
+                    var idBtn = id_tr + "+" + termin.dan; //npr yoga-hatha+Pon kako bismo znali sta zelimo da rez
+                    var btn = document.createElement("BUTTON");   // Create a <button> element
+                    btn.type = "button";
+                    btn.className = "btn resBtn";
+                    btn.innerHTML = "Rezerviši";                   // Insert text
+                    btn.id = idBtn;
+                    
+                    td.append(btn);
+                    
+                }else{
+                    td.append("");
+                }
                 tr.append(td);
 
                 tabela.append(tr);
+                var btns_arr = document.getElementsByClassName("resBtn");
+                for( var i = 0; i < btns_arr.length; i++){
+                    btns_arr[i].onclick = reserve;
+                }
             });
         }
 
-        //tabela.append(tr);
+        
     }
 
 
+}
+
+function reserve(){
+    var idBtn = this.id;
+    var tip_tr = idBtn.substr(0, idBtn.indexOf('-'));
+    var tr = idBtn.substr(0, idBtn.indexOf('+'));
+    var termin_dan = idBtn.substring(idBtn.indexOf('+') + 1, idBtn.length);
+
+    //uzimam odgovarajuci tip treninga
+    var tr_obj_niz = JSON.parse(localStorage.getItem(tip_tr));
+    var tr_obj;
+    var resTermin;
+
+
+    //trazim odgovarajuci trening unutar tipa treninga
+    tr_obj_niz.forEach(trening => {
+        if (trening.id_tr == tr){
+            tr_obj = trening;
+        }
+    });
+
+    //trazim odgovarajuci termin unutar odgovarajuceg treninga
+    for(kljuc in tr_obj) {
+        if(kljuc == "termini"){
+            //prolazimo kroz sve termine i trazimo nas termin
+            tr_obj[kljuc].forEach(termin => {
+                if(termin.dan == termin_dan){
+                    resTermin = termin;
+                }
+            });
+        }
+
+    }
+
+    //smanjiti broj slobodnih mesta
+    resTermin["slobodno"]--;
+
+    //update local storage-a
+    localStorage.setItem(tip_tr, JSON.stringify(tr_obj_niz)); 
+    var zakazano = "Trening: " + tip_tr + ", dan: " + resTermin.dan + ", vreme: " + resTermin.vreme_pocetak + "h - " + resTermin.vreme_kraj + "h";
+
+    //osvezi tabelu
+    showTable(tr);
+
+    //obavesti korisnika
+    Swal.fire({
+        icon: 'success',
+        title: 'Vidimo se!',
+        text: 'Uspesno ste zakazali trening.',
+        confirmButtonColor: 'green'
+    })
+
+    alert(zakazano);
 }

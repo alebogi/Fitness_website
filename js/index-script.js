@@ -18,6 +18,8 @@ function initUser(){
     }
 
     localStorage.setItem("user", JSON.stringify(user));
+    var lastRes = new Array();
+    localStorage.setItem("lastReservations", JSON.stringify(lastRes));
 }
 
 function initTr(){ 

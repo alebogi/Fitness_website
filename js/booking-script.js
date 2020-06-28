@@ -518,8 +518,18 @@ function showTable(id_tr){
                 }
 
                 //da se onemoguci kliktanje dva puta na istu rezervaciju
-                if(idBtn == localStorage.getItem("lastRes")){
-                    document.getElementById(idBtn).disabled = true;
+                // if(idBtn == localStorage.getItem("lastRes")){
+                //     document.getElementById(idBtn).disabled = true;
+                // }
+                var arr = JSON.parse(localStorage.getItem("lastReservations"));
+                if(arr != null){
+                    if(arr.length > 0){
+                        for(var i = 0; i < arr.length; i++){
+                            if (idBtn == arr[i]){
+                                document.getElementById(idBtn).disabled = true;
+                            }
+                        }
+                    }
                 }
             });
         }
@@ -569,7 +579,11 @@ function reserve(){
     localStorage.setItem(tip_tr, JSON.stringify(tr_obj_niz)); 
     
     //zelimo da izmenimo dugme tako da ne moze isti trening da se rezervise vise puta
-    localStorage.setItem("lastRes", this.id);
+    var arr = JSON.parse(localStorage.getItem("lastReservations"));
+    if(arr != null){
+        arr.push(this.id);
+    }
+    localStorage.setItem("lastReservations", JSON.stringify(arr));
 
     //osvezi tabelu
     showTable(tr);

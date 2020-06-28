@@ -6,6 +6,8 @@ var yoga = [
     {
         id_tr: "yoga-hatha",
         trening:"Hatha yoga",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -27,6 +29,8 @@ var yoga = [
     {
         id_tr: "yoga-ashtanga",
         trening:"Aštanga yoga",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -48,6 +52,8 @@ var yoga = [
     {
         id_tr: "yoga-raja",
         trening:"Radža yoga",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -72,6 +78,8 @@ var pilates = [
     {
         id_tr: "pilates-classic",
         trening:"Klasični pilates",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -93,6 +101,8 @@ var pilates = [
     {
         id_tr: "pilates-stot",
         trening:"Stot pilates",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -114,6 +124,8 @@ var pilates = [
     {
         id_tr: "pilates-reformer",
         trening:"Reformer pilates",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -138,6 +150,8 @@ var cardio = [
     {
         id_tr: "cardio-hiit",
         trening:"HIIT-cardio",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -166,6 +180,8 @@ var cardio = [
     {
         id_tr: "cardio-cardiobox",
         trening:"Cardio box",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -194,6 +210,8 @@ var cardio = [
     {
         id_tr: "cardio-crossfit",
         trening:"Crossfit-cardio",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -225,6 +243,8 @@ var core = [
     {
         id_tr: "core-plyometrics",
         trening:"Plyometrics-core",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -253,6 +273,8 @@ var core = [
     {
         id_tr: "core-sixpack",
         trening:"Six pack-core",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -281,6 +303,8 @@ var core = [
     {
         id_tr: "core-circuit",
         trening:"Circuit-core",
+        ocena: "0",
+        ocenilo_ljudi: "",
         
         termini : 
         [
@@ -308,20 +332,54 @@ var core = [
     }
 ]
 
+
+//objekat koji sluzi za pravljenje rezervacije
+var rez = {
+    tip_tr:"",
+    tr_id:"",
+    tr_ime:"",
+    dan:"",
+    vreme_pocetak:"",
+    vreme_kraj: ""
+}
+
+var reservations = [
+    {
+        tip_tr:"",
+        tr:"",
+        dan:"",
+        vreme_pocetak:"",
+        vreme_kraj: ""
+    },
+    {
+        tip_tr:"",
+        tr:"",
+        dan:"",
+        vreme_pocetak:"",
+        vreme_kraj: ""
+    },
+    {
+        tip_tr:"",
+        tr:"",
+        dan:"",
+        vreme_pocetak:"",
+        vreme_kraj: ""
+    }
+ ];
 //-------------------------------------------------------------------------------------------------
 
-function initLocalStorage(){ 
-    //ako prvi put ulazimo na sajt
-    if (localStorage.getItem("firstVisit") == null){
-        localStorage.setItem("firstVisit", 1);
+// function initLocalStorage(){ 
+//     //ako prvi put ulazimo na sajt
+//     if (localStorage.getItem("firstVisit") == null){
+//         localStorage.setItem("firstVisit", 1);
 
-        localStorage.setItem("yoga", JSON.stringify(yoga));
-        localStorage.setItem("pilates", JSON.stringify(pilates));
-        localStorage.setItem("cardio", JSON.stringify(cardio));
-        localStorage.setItem("core", JSON.stringify(core));
-    }
+//         localStorage.setItem("yoga", JSON.stringify(yoga));
+//         localStorage.setItem("pilates", JSON.stringify(pilates));
+//         localStorage.setItem("cardio", JSON.stringify(cardio));
+//         localStorage.setItem("core", JSON.stringify(core));
+//     }
 
-}
+// }
 
 
 //-------------------------------------- jQUERY ---------------------------------------------------
@@ -445,7 +503,7 @@ function showTable(id_tr){
                     btn.className = "btn resBtn";
                     btn.innerHTML = "Rezerviši";                   // Insert text
                     btn.id = idBtn;
-                    
+                                        
                     td.append(btn);
                     
                 }else{
@@ -457,6 +515,11 @@ function showTable(id_tr){
                 var btns_arr = document.getElementsByClassName("resBtn");
                 for( var i = 0; i < btns_arr.length; i++){
                     btns_arr[i].onclick = reserve;
+                }
+
+                //da se onemoguci kliktanje dva puta na istu rezervaciju
+                if(idBtn == localStorage.getItem("lastRes")){
+                    document.getElementById(idBtn).disabled = true;
                 }
             });
         }
@@ -504,7 +567,9 @@ function reserve(){
 
     //update local storage-a
     localStorage.setItem(tip_tr, JSON.stringify(tr_obj_niz)); 
-    var zakazano = "Trening: " + tip_tr + ", dan: " + resTermin.dan + ", vreme: " + resTermin.vreme_pocetak + "h - " + resTermin.vreme_kraj + "h";
+    
+    //zelimo da izmenimo dugme tako da ne moze isti trening da se rezervise vise puta
+    localStorage.setItem("lastRes", this.id);
 
     //osvezi tabelu
     showTable(tr);
@@ -517,5 +582,23 @@ function reserve(){
         confirmButtonColor: 'green'
     })
 
-    alert(zakazano);
+    rez.tip_tr = tip_tr;
+    rez.tr_id = tr;
+    rez.tr_ime = tr_obj.trening;
+    rez.dan = resTermin.dan;
+    rez.vreme_pocetak = resTermin.vreme_pocetak;
+    rez.vreme_kraj = resTermin.vreme_kraj;
+
+    //sacuvamo u localstorage
+    var rezArr;
+    //ako ne postoji u local storage moramo da inicijalizujemo niz
+    if(localStorage.getItem("reservations") == null){
+        rezArr = new Array();
+    }else{
+        rezArr = JSON.parse(localStorage.getItem("reservations"));
+    }
+    rezArr.push(rez);
+
+    localStorage.setItem("reservations",JSON.stringify(rezArr));
 }
+

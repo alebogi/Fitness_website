@@ -27,8 +27,9 @@ function initTr(){
         {
             id_tr: "yoga-hatha",
             trening:"Hatha yoga",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: ["maja_93"],
             
             termini : 
             [
@@ -50,8 +51,9 @@ function initTr(){
         {
             id_tr: "yoga-ashtanga",
             trening:"Aštanga yoga",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -73,8 +75,9 @@ function initTr(){
         {
             id_tr: "yoga-raja",
             trening:"Radža yoga",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: ["maja_93"],
             
             termini : 
             [
@@ -99,8 +102,9 @@ function initTr(){
         {
             id_tr: "pilates-classic",
             trening:"Klasični pilates",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -122,8 +126,9 @@ function initTr(){
         {
             id_tr: "pilates-stot",
             trening:"Stot pilates",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -145,8 +150,9 @@ function initTr(){
         {
             id_tr: "pilates-reformer",
             trening:"Reformer pilates",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -171,8 +177,9 @@ function initTr(){
         {
             id_tr: "cardio-hiit",
             trening:"HIIT-cardio",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: ["maja_93"],
             
             termini : 
             [
@@ -201,8 +208,9 @@ function initTr(){
         {
             id_tr: "cardio-cardiobox",
             trening:"Cardio box",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -231,8 +239,9 @@ function initTr(){
         {
             id_tr: "cardio-crossfit",
             trening:"Crossfit-cardio",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: ["maja_93"],
             
             termini : 
             [
@@ -264,8 +273,9 @@ function initTr(){
         {
             id_tr: "core-plyometrics",
             trening:"Plyometrics-core",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [
@@ -294,8 +304,9 @@ function initTr(){
         {
             id_tr: "core-sixpack",
             trening:"Six pack-core",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: ["maja_93"],
             
             termini : 
             [
@@ -324,8 +335,9 @@ function initTr(){
         {
             id_tr: "core-circuit",
             trening:"Circuit-core",
-            ocena: "0",
-            ocenilo_ljudi: "",
+            ocena: 0,
+            ocenilo_ljudi: 0,
+            bili_na_tr: [],
             
             termini : 
             [

@@ -8,6 +8,7 @@ var yoga = [
         trening:"Hatha yoga",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: ["maja_93"],
         
         termini : 
         [
@@ -31,6 +32,7 @@ var yoga = [
         trening:"Aštanga yoga",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -54,6 +56,7 @@ var yoga = [
         trening:"Radža yoga",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -80,6 +83,7 @@ var pilates = [
         trening:"Klasični pilates",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -103,6 +107,7 @@ var pilates = [
         trening:"Stot pilates",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -126,6 +131,7 @@ var pilates = [
         trening:"Reformer pilates",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -152,6 +158,7 @@ var cardio = [
         trening:"HIIT-cardio",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: ["maja_93"],
         
         termini : 
         [
@@ -182,6 +189,7 @@ var cardio = [
         trening:"Cardio box",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -212,6 +220,7 @@ var cardio = [
         trening:"Crossfit-cardio",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: ["maja_93"],
         
         termini : 
         [
@@ -245,6 +254,7 @@ var core = [
         trening:"Plyometrics-core",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -275,6 +285,7 @@ var core = [
         trening:"Six pack-core",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [
@@ -305,6 +316,7 @@ var core = [
         trening:"Circuit-core",
         ocena: "0",
         ocenilo_ljudi: "",
+        bili_na_tr: [],
         
         termini : 
         [

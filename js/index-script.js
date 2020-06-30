@@ -59,7 +59,7 @@ function initTr(){
             [
                 {
                     dan:"Uto",
-                    vreme_pocetak:"12:00",
+                    vreme_pocetak:"19:20",
                     vreme_kraj: "13:30",
                     slobodno: "15"
                 }, 

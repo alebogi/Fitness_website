@@ -45,3 +45,16 @@
 .booked{
     margin-top: 100px;
 }
+
+.btn{
+    color: white;
+    background-color: transparent;
+    border-color: rgb(171, 33, 23);
+    border-width: 2px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: rgb(171, 33, 23);
+}

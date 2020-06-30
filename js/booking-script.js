@@ -352,30 +352,37 @@ var rez = {
     tr_ime:"",
     dan:"",
     vreme_pocetak:"",
-    vreme_kraj: ""
+    vreme_kraj: "",
+    datum:""
 }
 
 var reservations = [
     {
         tip_tr:"",
-        tr:"",
+        tr_id:"",
+        tr_ime:"",
         dan:"",
         vreme_pocetak:"",
-        vreme_kraj: ""
+        vreme_kraj: "",
+        datum:""
     },
     {
         tip_tr:"",
-        tr:"",
+        tr_id:"",
+        tr_ime:"",
         dan:"",
         vreme_pocetak:"",
-        vreme_kraj: ""
+        vreme_kraj: "",
+        datum:""
     },
     {
         tip_tr:"",
-        tr:"",
+        tr_id:"",
+        tr_ime:"",
         dan:"",
         vreme_pocetak:"",
-        vreme_kraj: ""
+        vreme_kraj: "",
+        datum:""
     }
  ];
 //-------------------------------------------------------------------------------------------------
@@ -553,7 +560,7 @@ function showTable(id_tr){
 }
 
 function reserve(){
-    var idBtn = this.id;
+    var idBtn = this.id; //yoga-hatha+pon
     var tip_tr = idBtn.substr(0, idBtn.indexOf('-'));
     var tr = idBtn.substr(0, idBtn.indexOf('+'));
     var termin_dan = idBtn.substring(idBtn.indexOf('+') + 1, idBtn.length);
@@ -593,7 +600,7 @@ function reserve(){
     //zelimo da izmenimo dugme tako da ne moze isti trening da se rezervise vise puta
     var arr = JSON.parse(localStorage.getItem("lastReservations"));
     if(arr != null){
-        arr.push(this.id);
+        arr.push(this.id); //yoga-hatha+pon
     }
     localStorage.setItem("lastReservations", JSON.stringify(arr));
 
@@ -614,6 +621,11 @@ function reserve(){
     rez.dan = resTermin.dan;
     rez.vreme_pocetak = resTermin.vreme_pocetak;
     rez.vreme_kraj = resTermin.vreme_kraj;
+    var dateOfTr = getDates(resTermin.dan, resTermin.vreme_pocetak);
+    var dd = String(dateOfTr.getDate()).padStart(2, '0');
+    var mm = String(dateOfTr.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = dateOfTr.getFullYear();
+    rez.datum = dd+"/"+mm+"/"+yyyy;
 
     //sacuvamo u localstorage
     var rezArr;
@@ -628,3 +640,57 @@ function reserve(){
     localStorage.setItem("reservations",JSON.stringify(rezArr));
 }
 
+
+
+//--------------------------------------?????????????????????
+function getDates(day, time){
+    var tr_day = day;
+    var tr_startTime = time;
+  
+    var todaysDate = new Date(); //danasnji datum npr 30.06.2020
+    var todaysDay = todaysDate.getDay(); //danasnji dan npr utorak
+    var dayOfTr; //kog dana u nedelji je trening
+    switch(tr_day){
+      case "Pon" || "Mon": dayOfTr = 1; break;
+      case "Uto" || "Tue": dayOfTr = 2; break;
+      case "Sre" || "Wen": dayOfTr = 3; break;
+      case "Čet" || "Thr": dayOfTr = 4; break;
+      case "Pet" || "Fri": dayOfTr = 5; break;
+      case "Sub" || "Sat": dayOfTr = 6; break;
+      case "Ned" || "Sun": dayOfTr = 0; break;
+    }
+   
+    //koji datum pada taj dan
+    var dateOfTr;
+    
+    if(todaysDay == dayOfTr){
+      //ako je dan isti kao danasnji, treba pogledati sate
+      var now_hrs = todaysDate.getHours();
+      var now_min = todaysDate.getMinutes();
+  
+      var tr_hrs = tr_startTime.split(":")[0];
+      var tr_min = tr_startTime.split(":")[1];
+  
+      if((now_hrs ) > tr_hrs){
+        dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
+      }else if ((now_hrs ) <= tr_hrs){
+        dateOfTr = todaysDate;
+      }
+    }else{
+      //ako dan nije isti kao danasnji, dohvatamo najblizi naredni dan u nedelji
+      dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
+    }
+    
+    
+    
+    return dateOfTr;
+  }
+
+  //dajemo danasnji datum i koji sledeci dan u nedelji nam treba
+//dobijamo kog datuma je taj dan  koji nam treba
+function getNextDayOfWeek(todaysDate, dayOfWeek) {
+    var resultDate = new Date(todaysDate.getTime());
+    resultDate.setDate(todaysDate.getDate() + (7 + dayOfWeek - todaysDate.getDay() - 1) % 7 +1);  
+  
+    return resultDate;
+  }

@@ -6,12 +6,15 @@ var user = {
 
 }
 
+//objekat koji sluzi za pravljenje rezervacije
 var rez = {
   tip_tr:"",
-  tr:"",
+  tr_id:"",
+  tr_ime:"",
   dan:"",
   vreme_pocetak:"",
-  vreme_kraj: ""
+  vreme_kraj: "",
+  datum:""
 }
 
 /**
@@ -50,6 +53,7 @@ function showBooked(){
   //prikaz rezervisanih treninga
   var rezArr = JSON.parse(localStorage.getItem("reservations"));
   if((rezArr == null) || (rezArr.length == 0)) {
+    $("#tableBooked").children("tr").remove();
     $("#table-empty").show();
     return;
   }
@@ -90,7 +94,7 @@ function showBooked(){
     //dugme za otkazivanje
     //dugme svakako postavljamo, ali zavisi sta ce dugme odraditi
     td = $("<td></td>");
-    var idBtn = rezervacija.tr_id + "+" + rezervacija.dan + "+" + rezervacija.vreme_pocetak; //npr yoga-hatha+Pon+09:30 kako bismo znali sta zelimo da rez
+    var idBtn = rezervacija.tr_id + "+" + rezervacija.dan + "+" + rezervacija.vreme_pocetak + "+" + rezervacija.datum; //npr yoga-hatha+Pon+09:30+02/07/2020 kako bismo znali sta zelimo da rez
     var btn = document.createElement("BUTTON");   // Create a <button> element
     btn.type = "button";
     btn.className = "btn cancelBtn";
@@ -113,57 +117,6 @@ function showBooked(){
 }
 
 
-// function getDates(day, time){
-//   var tr_day = day;
-//   var tr_startTime = time;
-
-//   var todaysDate = new Date(); //danasnji datum npr 30.06.2020
-//   var todaysDay = todaysDate.getDay(); //danasnji dan npr utorak
-//   var dayOfTr; //kog dana u nedelji je trening
-//   switch(tr_day){
-//     case "Pon" || "Mon": dayOfTr = 1; break;
-//     case "Uto" || "Tue": dayOfTr = 2; break;
-//     case "Sre" || "Wen": dayOfTr = 3; break;
-//     case "Čet" || "Thr": dayOfTr = 4; break;
-//     case "Pet" || "Fri": dayOfTr = 5; break;
-//     case "Sub" || "Sat": dayOfTr = 6; break;
-//     case "Ned" || "Sun": dayOfTr = 0; break;
-//   }
- 
-//   //koji datum pada taj dan
-//   var dateOfTr;
-  
-//   if(todaysDay == dayOfTr){
-//     //ako je dan isti kao danasnji, treba pogledati sate
-//     var now_hrs = todaysDate.getHours();
-//     var now_min = todaysDate.getMinutes();
-
-//     var tr_hrs = tr_startTime.split(":")[0];
-//     var tr_min = tr_startTime.split(":")[1];
-
-//     if((now_hrs + 1) >= tr_hrs){
-//       dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
-//     }else if ((now_hrs + 1) < tr_hrs){
-//       dateOfTr = todaysDate;
-//     }
-//   }else{
-//     //ako dan nije isti kao danasnji, dohvatamo najblizi naredni dan u nedelji
-//     dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
-//   }
-  
-  
-  
-//   return dateOfTr;
-// }
-
-// //dajemo danasnji datum i koji sledeci dan u nedelji nam treba
-// //dobijamo kog datuma je taj dan  koji nam treba
-// function getNextDayOfWeek(todaysDate, dayOfWeek) {
-//   var resultDate = new Date(todaysDate.getTime());
-//   resultDate.setDate(todaysDate.getDate() + (7 + dayOfWeek - todaysDate.getDay() - 1) % 7 +1);  
-
-//   return resultDate;
-// }
 
 function refreshStorage(){
   var rezArr = JSON.parse(localStorage.getItem("reservations"));
@@ -183,7 +136,7 @@ function refreshStorage(){
   var pozicija = 0;
   rezArr.forEach(rezervacija => {
 
-    alert("slucaj: "+ rezervacija.datum + " " + rezervacija.vreme_pocetak);
+    //alert("slucaj: "+ rezervacija.datum + " " + rezervacija.vreme_pocetak);
 
     var trDateStr = rezervacija.datum;
     var trDay = rezervacija.dan;
@@ -194,40 +147,49 @@ function refreshStorage(){
     var tr_min = rezervacija.vreme_pocetak.split(':')[1];
 
     if (yyyy > tryyyy){
-      alert(true);
+      //alert(true);
       deleteQueue.push(pozicija);
       yes=1;
     }else if(yyyy < tryyyy){
-      alert(false);
+     // alert(false);
     }else if (yyyy == tryyyy){
       if(mm > trmm){
-        alert(true);
+       // alert(true);
         deleteQueue.push(pozicija);
         yes=1;
       }else if(mm < trmm){
-        alert(false);
+        //alert(false);
       }else if( mm == trmm){
-        if(now_hrs > tr_hrs) {
-          alert(true);
+        if(dd > trdd){
+          //alert(true);
           deleteQueue.push(pozicija);
           yes=1;
-        }else if(now_hrs < tr_hrs){
-          alert(false);
-        }else if(now_hrs == tr_hrs){
-          if(now_min > tr_min){
-            if (tr_min != "00"){
-              alert(true);
-              deleteQueue.push(pozicija);
-              yes=1;
-            }else{
-              alert(false);
+        }else if(dd<trdd){
+         // alert(false);
+        }else if(dd == trdd){
+          if(now_hrs > tr_hrs) {
+            //alert(true);
+            deleteQueue.push(pozicija);
+            yes=1;
+          }else if(now_hrs < tr_hrs){
+            //alert(false);
+          }else if(now_hrs == tr_hrs){
+            if(now_min > tr_min){
+              if (tr_min != "00"){
+                //alert(true);
+                deleteQueue.push(pozicija);
+                yes=1;
+              }else{
+                //alert(false);
+              }
+            }else if(now_min < tr_min){
+              //alert(false);
+            }else if(now_min == tr_min){
+              //alert(false);
             }
-          }else if(now_min < tr_min){
-            alert(false);
-          }else if(now_min == tr_min){
-            alert(false);
           }
         }
+        
       }
     }
     
@@ -235,27 +197,147 @@ function refreshStorage(){
     pozicija++;
   });
 
+  //moramo da vidimo koje smo treninge obirsali da bismo idBtn tog treninga obrisali iz nisa lastReservations i da bi se dugme enable
+  var tmp_rez; var idBtn; var arrIdBtns = new Array();
+  for(var i=0; i < deleteQueue.length; i++){
+    tmp_rez = rezArr[deleteQueue[i]];
+    idBtn = tmp_rez.tr_id + "+" + tmp_rez.dan;
+    arrIdBtns.push(idBtn);
+    //treba resetovati br slobodnih mesta na tom treningu
+    var x_tip = JSON.parse(localStorage.getItem(tmp_rez.tip_tr));
+    x_tip.forEach(trening => {
+      if (trening.id_tr == tmp_rez.tr_id){
+        if(otkazano==1){
+          otkazano=0;
+        }else
+          trening.bili_na_tr=1; //markiramo da je osoba bila na tr
+        for(kljuc in trening) {
+          if(kljuc == "termini"){
+              //prolazimo kroz sve termine i trazimo nas termin
+              trening[kljuc].forEach(termin => {
+                  if(termin.dan == tmp_rez.dan){
+                      termin.slobodno = termin.max_slobodno;
+                  }
+              });
+          }
+  
+      }
+      }
+    });
+    localStorage.setItem(tmp_rez.tip_tr, JSON.stringify(x_tip));
+  }
+ // alert(JSON.stringify(arrIdBtns));
+
+  var lastRez = JSON.parse(localStorage.getItem("lastReservations"));
+  for(var i = 0; i< lastRez.length; i++){
+    for(var j = 0; j < arrIdBtns.length; j++){
+      if(lastRez[i] == arrIdBtns[j]){
+        lastRez.splice(i, 1);
+      }
+    }
+  }
+  //alert(JSON.stringify(lastRez));
+  localStorage.setItem("lastReservations", JSON.stringify(lastRez)); 
+
   if(yes==1){
     for(var i=0; i < deleteQueue.length; i++){
-      rezArr.splice(deleteQueue[i], 1);
+      delete rezArr[deleteQueue[i]];
+    }
+    for(var i=0; i < rezArr.length; i++){
+      if(typeof rezArr[i] == "undefined"){
+        rezArr.splice(i, 1);
+      }
+      
     }
   }
 
   localStorage.setItem("reservations", JSON.stringify(rezArr));
+
+  
 }
-
+var otkazano = 0;
 function cancelReservation(){
-  var idBtn = this.id; alert(idBtn);
+  //detalji treninga
+  var idBtn = this.id;  //yoga-hatha+Pon+09:30+01/07/2020
+  var id_tr = idBtn.split("+")[0]; //yoga-hatha
+  var dan_tr = idBtn.split("+")[1]; //Pon
+  var vreme_tr = idBtn.split("+")[2]; //09:30
+  var hrs_tr = vreme_tr.split(":")[0]; //09
+  var min_tr = vreme_tr.split(":")[1]; //30
+  var datum_tr = idBtn.split("+")[3]; // 01/07/2020 
+  var trdd = (datum_tr).split('/')[0];// 01
+  var trmm = (datum_tr).split('/')[1];// 07
+  var tryyyy = (datum_tr).split('/')[2]; //2020
 
+
+  //detalji danasnjeg dana
   var today = new Date();
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
   var day = today.getDay(); 
-  //alert(today.addDays(5)); 
-  //showDates(idBtn);
-  today = dd + '/' + mm + '/' + yyyy + " " + day;
-  //alert(today); 
+  var now_hrs = today.getHours();
+  var now_min = today.getMinutes();
+
+  //ako je ostalo vise od 30min mozemo da otkazemo
+  var ok_to_cancel = 0;
+  if (yyyy<tryyyy){
+    ok_to_cancel = 1;
+  }else if (mm < trmm){
+    ok_to_cancel = 1;
+  }else if(dd < trdd){
+    ok_to_cancel = 1;
+  }else if(dd == trdd){
+    if((now_hrs+1)<hrs_tr){
+      ok_to_cancel=1;
+    }else if(now_hrs<hrs_tr){
+      if((now_min+30)>=60){
+        var c=now_min+30-60;
+        if(c<min_tr){
+          ok_to_cancel=1;
+        }
+      }else{
+        ok_to_cancel=1;
+      }
+    }else if(now_hrs == hrs_tr){
+      if((now_min+30)<min_tr){
+        ok_to_cancel=1;
+      }
+    }
+  }
+
+  if(ok_to_cancel==1){
+    var rezArr = JSON.parse(localStorage.getItem("reservations"));
+
+    rezArr.forEach(rezervacija => {
+      if(rezervacija.tr_id == id_tr){
+        if(rezervacija.datum == datum_tr){ //ako je to ta rezervacija
+          rezervacija.datum = "01/01/1900"; //stavim datum u proslost i onda se obrise
+        }
+      }  
+      
+    });
+
+    localStorage.setItem("reservations", JSON.stringify(rezArr));
+     //obavesti korisnika
+     Swal.fire({
+      icon: 'success',
+      title: 'Uspešno ste otkazali trening.',
+      text: 'Žao nam je što ne dolazite :(',
+      confirmButtonColor: 'green'
+    })
+    otkazano=1;
+    showBooked();
+  }else{
+     //obavesti korisnika
+     Swal.fire({
+      icon: 'error',
+      title: 'Neuspešno!',
+      text: 'Trening može da se otkaže najmanje 30 minuta pre početka istog. ',
+      confirmButtonColor: 'red'
+  })
+  }
+   
 }
 
 
@@ -283,5 +365,5 @@ function logOut(){
 
     localStorage.clear();
 
-    //Swal.fire('Ne možete se zaista izlogovati, ali potvrdom uspevate da osvežite sesiju i da poništite prethodno sačuvane informacije.');
+    
 }

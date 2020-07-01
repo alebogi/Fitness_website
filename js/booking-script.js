@@ -610,8 +610,8 @@ function reserve(){
     //obavesti korisnika
     Swal.fire({
         icon: 'success',
-        title: 'Vidimo se!',
-        text: 'Uspesno ste zakazali trening.',
+        title: 'Vidimo se! :)',
+        text: 'Uspešno ste zakazali trening.',
         confirmButtonColor: 'green'
     })
 
@@ -673,8 +673,14 @@ function getDates(day, time){
   
       if((now_hrs ) > tr_hrs){
         dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
-      }else if ((now_hrs ) <= tr_hrs){
+      }else if ((now_hrs ) < tr_hrs){
         dateOfTr = todaysDate;
+      }else if((now_hrs ) == tr_hrs){
+          if(now_min >= tr_min){
+            dateOfTr = getNextDayOfWeek(todaysDate, dayOfTr);
+          }else if(now_min < tr_min){
+            dateOfTr = todaysDate;
+          }
       }
     }else{
       //ako dan nije isti kao danasnji, dohvatamo najblizi naredni dan u nedelji

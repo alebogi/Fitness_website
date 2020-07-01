@@ -29,7 +29,7 @@ function initTr(){
             trening:"Hatha yoga",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: ["maja_93"],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -37,14 +37,16 @@ function initTr(){
                     dan:"Pon",
                     vreme_pocetak:"08:00",
                     vreme_kraj: "09:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"08:00",
                     vreme_kraj: "09:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }
             ]
         }, 
@@ -53,22 +55,24 @@ function initTr(){
             trening:"Aštanga yoga",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
                 {
                     dan:"Uto",
-                    vreme_pocetak:"19:20",
+                    vreme_pocetak:"08:00",
                     vreme_kraj: "13:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }, 
     
                 {
                     dan:"Sub",
                     vreme_pocetak:"12:00",
                     vreme_kraj: "13:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }
             ]
         }, 
@@ -77,7 +81,7 @@ function initTr(){
             trening:"Radža yoga",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: ["maja_93"],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -85,14 +89,16 @@ function initTr(){
                     dan:"Sre",
                     vreme_pocetak:"08:00",
                     vreme_kraj: "09:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }, 
     
                 {
                     dan:"Ned",
                     vreme_pocetak:"08:00",
                     vreme_kraj: "09:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }
             ]
         }
@@ -104,7 +110,7 @@ function initTr(){
             trening:"Klasični pilates",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -112,14 +118,16 @@ function initTr(){
                     dan:"Uto",
                     vreme_pocetak:"10:00",
                     vreme_kraj: "11:30",
-                    slobodno: "25"
+                    slobodno: "25",
+                    max_slobodno: "25"
                 }, 
     
                 {
                     dan:"Čet",
                     vreme_pocetak:"10:00",
                     vreme_kraj: "11:30",
-                    slobodno: "25"
+                    slobodno: "25",
+                    max_slobodno: "25"
                 }
             ]
         }, 
@@ -128,7 +136,7 @@ function initTr(){
             trening:"Stot pilates",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -136,14 +144,16 @@ function initTr(){
                     dan:"Čet",
                     vreme_pocetak:"12:00",
                     vreme_kraj: "13:30",
-                    slobodno: "18"
+                    slobodno: "18",
+                    max_slobodno: "18"
                 }, 
     
                 {
                     dan:"Ned",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "18"
+                    slobodno: "18",
+                    max_slobodno: "18"
                 }
             ]
         }, 
@@ -152,7 +162,7 @@ function initTr(){
             trening:"Reformer pilates",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -160,14 +170,16 @@ function initTr(){
                     dan:"Pon",
                     vreme_pocetak:"12:00",
                     vreme_kraj: "13:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"12:00",
                     vreme_kraj: "13:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }
             ]
         }
@@ -179,7 +191,7 @@ function initTr(){
             trening:"HIIT-cardio",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: ["maja_93"],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -187,21 +199,24 @@ function initTr(){
                     dan:"Pon",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "23"
+                    slobodno: "23",
+                    max_slobodno: "23"
                 }, 
     
                 {
                     dan:"Sre",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "23"
+                    slobodno: "23",
+                    max_slobodno: "23"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "23"
+                    slobodno: "23",
+                    max_slobodno: "23"
                 }
             ]
         }, 
@@ -210,7 +225,7 @@ function initTr(){
             trening:"Cardio box",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -218,21 +233,24 @@ function initTr(){
                     dan:"Pon",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }, 
     
                 {
                     dan:"Sre",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }
             ]
         }, 
@@ -241,7 +259,7 @@ function initTr(){
             trening:"Crossfit-cardio",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: ["maja_93"],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -249,21 +267,24 @@ function initTr(){
                     dan:"Uto",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "10"
+                    slobodno: "10",
+                    max_slobodno: "10"
                 }, 
     
                 {
                     dan:"Čet",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "10"
+                    slobodno: "10",
+                    max_slobodno: "10"
                 }, 
     
                 {
                     dan:"Sub",
                     vreme_pocetak:"16:00",
                     vreme_kraj: "17:30",
-                    slobodno: "10"
+                    slobodno: "10",
+                    max_slobodno: "10"
                 }
             ]
         }
@@ -275,7 +296,7 @@ function initTr(){
             trening:"Plyometrics-core",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -283,21 +304,24 @@ function initTr(){
                     dan:"Pon",
                     vreme_pocetak:"20:00",
                     vreme_kraj: "21:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }, 
     
                 {
                     dan:"Sre",
                     vreme_pocetak:"20:00",
                     vreme_kraj: "21:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"20:00",
                     vreme_kraj: "21:30",
-                    slobodno: "20"
+                    slobodno: "20",
+                    max_slobodno: "20"
                 }
             ]
         }, 
@@ -306,7 +330,7 @@ function initTr(){
             trening:"Six pack-core",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: ["maja_93"],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -314,21 +338,24 @@ function initTr(){
                     dan:"Uto",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }, 
     
                 {
                     dan:"Čet",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }, 
     
                 {
                     dan:"Sub",
                     vreme_pocetak:"18:00",
                     vreme_kraj: "19:30",
-                    slobodno: "15"
+                    slobodno: "15",
+                    max_slobodno: "15"
                 }
             ]
         }, 
@@ -337,7 +364,7 @@ function initTr(){
             trening:"Circuit-core",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: [],
+            bili_na_tr: 0,
             
             termini : 
             [
@@ -345,21 +372,24 @@ function initTr(){
                     dan:"Sre",
                     vreme_pocetak:"14:00",
                     vreme_kraj: "15:30",
-                    slobodno: "5"
+                    slobodno: "5",
+                    max_slobodno: "5"
                 }, 
     
                 {
                     dan:"Pet",
                     vreme_pocetak:"14:00",
                     vreme_kraj: "15:30",
-                    slobodno: "5"
+                    slobodno: "5",
+                    max_slobodno: "5"
                 }, 
     
                 {
                     dan:"Ned",
                     vreme_pocetak:"14:00",
                     vreme_kraj: "15:30",
-                    slobodno: "5"
+                    slobodno: "5",
+                    max_slobodno: "5"
                 }
             ]
         }

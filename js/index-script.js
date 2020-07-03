@@ -81,7 +81,7 @@ function initTr(){
             trening:"Radža yoga",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: 0,
+            bili_na_tr: 1,
             
             termini : 
             [
@@ -136,7 +136,7 @@ function initTr(){
             trening:"Stot pilates",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: 0,
+            bili_na_tr: 1,
             
             termini : 
             [
@@ -225,7 +225,7 @@ function initTr(){
             trening:"Cardio box",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: 0,
+            bili_na_tr: 1,
             
             termini : 
             [
@@ -259,7 +259,7 @@ function initTr(){
             trening:"Crossfit-cardio",
             ocena: 0,
             ocenilo_ljudi: 0,
-            bili_na_tr: 0,
+            bili_na_tr: 1,
             
             termini : 
             [

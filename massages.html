@@ -12,6 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/massages-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
 </head>
 <body>
     <div id="wrapper" class="home-page"> 
@@ -251,52 +254,58 @@
                             <div class="card-body px-lg-5 pt-0">
                         
                                 <!-- Form -->
-                                <form class="text-center" style="color: #757575;" action="#!">
+                                <form class="text-center" style="color: #757575;" name="formaMasaza">
                         
                                     <div class="form-row">
                                         <div class="col">
                                             <!-- First name -->
                                             <div class="md-form">
-                                                <input type="text" id="materialRegisterFormFirstName" class="form-control">
+                                                <input type="text" id="materialRegisterFormFirstName" class="form-control" name="firstName">
                                                 <label for="materialRegisterFormFirstName">Ime</label>
+                                                <span id="nameError" style="color: red;" ><br/></span>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <!-- Last name -->
                                             <div class="md-form">
-                                                <input type="text" id="materialRegisterFormLastName" class="form-control">
+                                                <input type="text" id="materialRegisterFormLastName" class="form-control" name="lastName">
                                                 <label for="materialRegisterFormLastName">Prezime</label>
+                                                <span id="lastnameError" style="color: red;" ><br/></span>
                                             </div>
                                         </div>
                                     </div>
                         
                                     <!-- E-mail -->
                                     <div class="md-form mt-0">
-                                        <input type="email" id="materialRegisterFormEmail" class="form-control">
+                                        <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" placeholder="exp. petar@gmail.com">
                                         <label for="materialRegisterFormEmail">E-mail</label>
+                                        <span id="emailError" style="color: red;" ><br/></span>
                                     </div>
     
                                     <!-- Phone number -->
                                     <div class="md-form">
-                                        <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+                                        <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="phone" placeholder="exp. 0641234567 or 064-123-4567">
                                         <label for="materialRegisterFormPhone">Kontakt telefon</label>
+                                        <span id="phoneError" style="color: red;" ><br/></span>
                                     </div>
     
                                     <div class="md-form">
-                                        <input type="date" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
-                                        <label for="materialRegisterFormPassword">Datum</label>
+                                        <input type="date" id="materialRegisterFormDate" class="form-control" aria-describedby="materialRegisterFormDateHelpBlock" name="date" min=new Date()>
+                                        <label for="materialRegisterFormDate">Datum</label>
+                                        <span id="dateError" style="color: red;" ><br/></span>
                                     </div>
     
                                     <div class="md-form">
-                                        <input type="text" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
-                                        <label for="materialRegisterFormPassword">Kratak opis problema</label>
+                                        <input type="text" id="materialRegisterFormProblemDesc" class="form-control" aria-describedby="materialRegisterFormProblemDescHelpBlock" name="problemDesc">
+                                        <label for="materialRegisterFormProblemDesc">Kratak opis problema</label>
+                                        <span id="problemDescError" style="color: red;" ><br/></span>
                                     </div>
                                     
                         
                                     <!-- Sign up button -->
-                                    <button class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0" action="provera()" type="submit">Zakaži</button>
+                                    <button class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0"  type="button" onclick="zakazi()">Zakaži</button>
                                     
-                                    <button class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0" action="preuzmiPDF()" type="submit">PDF</button>
+                                    <button class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0"  type="button" onclick="kreirajPDF()" hidden="true">PDF</button>
     
                                     <hr>
                         

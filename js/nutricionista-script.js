@@ -40,8 +40,10 @@ function zakazi(){
 
     //proveri telefon
     var mobileRegExp = /^(\d{10}|\d{3}-\d{3}-\d{4}|\(\d{3}\)\d{3}-\d{4})$/;
-    if(!mobileRegExp.test(phone)){
-        document.getElementById("phoneError").innerHTML = "<br/> Broj telefona nije u odgovarajucem formatu.";
+    if(phone == ""){
+        document.getElementById("phoneError").innerHTML = "<br/> Niste uneli broj telefona.";
+    }else if(!mobileRegExp.test(phone)){
+        document.getElementById("phoneError").innerHTML = "<br/> Broj telefona nije u odgovarajućem formatu.";
         error = true;
     }else{
         document.getElementById("phoneError").innerHTML = "";

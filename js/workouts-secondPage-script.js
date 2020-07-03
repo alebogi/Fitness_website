@@ -130,7 +130,7 @@ function ocena(val){
         var bio = false;
         if(test==1)
             bio = true;
-
+        
         if(bio){
             var ocena = trening.ocena;
             ocena = trening.ocenilo_ljudi*ocena; 

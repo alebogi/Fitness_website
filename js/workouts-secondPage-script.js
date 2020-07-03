@@ -57,22 +57,24 @@ function komentarisiCrossfit(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariCrossfit"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariCrossfit", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariCrossfit"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariCrossfit", JSON.stringify(nizComms));
+        }
     }  else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -171,22 +173,24 @@ function komentarisiCardiobox(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariCardiobox"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariCardiobox", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariCardiobox"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariCardiobox", JSON.stringify(nizComms));
+        }
     }  else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -240,22 +244,24 @@ function komentarisiHiit(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariHiit"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariHiit", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariHiit"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariHiit", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -309,22 +315,24 @@ function komentarisiCircuit(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariCircuit"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariCircuit", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariCircuit"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariCircuit", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -377,22 +385,24 @@ function komentarisiSixpack(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariSixpack"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariSixpack", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariSixpack"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariSixpack", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -445,22 +455,24 @@ function komentarisiPlyometrics(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariPlyometrics"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariPlyometrics", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariPlyometrics"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariPlyometrics", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -514,22 +526,24 @@ function komentarisiClassic(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariClassic"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariClassic", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariClassic"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariClassic", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -582,22 +596,24 @@ function komentarisiStot(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariStot"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariStot", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariStot"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariStot", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -649,22 +665,24 @@ function komentarisiReformer(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariReformer"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariReformer", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariReformer"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariReformer", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -716,22 +734,24 @@ function komentarisiAshtanga(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariAshtanga"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariAshtanga", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariAshtanga"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariAshtanga", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -784,22 +804,24 @@ function komentarisiHatha(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariHatha"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariHatha", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariHatha"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariHatha", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";
@@ -851,22 +873,24 @@ function komentarisiRaja(){
     if(bio){
         var korisnik = JSON.parse(localStorage.getItem("user"));
         var comment = document.getElementById("komentar").value;
-        document.getElementById("komentar").value="";
-        var slika = "./img/client.jpg"
-        var ime = korisnik.username;
+        if(comment!=""){
+            document.getElementById("komentar").value="";
+            var slika = "./img/client.jpg"
+            var ime = korisnik.username;
 
-        var komentari = document.getElementById("komentari");
-        var htmlStringImg = '<div class="media"><img src="'
-        var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
-        var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
-        var htmlStringEnd =  '</p></div></div>';
-        
-        var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
-        komentari.innerHTML += upis;
+            var komentari = document.getElementById("komentari");
+            var htmlStringImg = '<div class="media"><img src="'
+            var htmlStringIme = '" style="border-radius: 50%; width:40px; height: 40px; margin-top: 15px;"><div class="media-body"><h4 class="media-heading user_name" style="padding-left:10px; padding-top: 15px;">'
+            var htmlStringComm = '</h4><p style="padding-left:10px; padding-top: 15px;">';
+            var htmlStringEnd =  '</p></div></div>';
+            
+            var upis = htmlStringImg+slika+htmlStringIme+ime+htmlStringComm+comment+htmlStringEnd;
+            komentari.innerHTML += upis;
 
-        nizComms = JSON.parse(localStorage.getItem("komentariRaja"));
-        nizComms.push(upis);
-        localStorage.setItem("komentariRaja", JSON.stringify(nizComms));
+            nizComms = JSON.parse(localStorage.getItem("komentariRaja"));
+            nizComms.push(upis);
+            localStorage.setItem("komentariRaja", JSON.stringify(nizComms));
+        }
     } else {
         alert("Niste bili na treningu, nema komentarisanja!");
         document.getElementById("komentar").value="";

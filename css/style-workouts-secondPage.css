@@ -259,3 +259,130 @@ hr{
 .rate > label:hover ~ input:checked ~ label {
   color: #c59b08;
 }
+
+
+.bg-top-yoga1{
+  background-image: url("../img/works/yoga/3.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-yoga2{
+  background-image: url("../img/works/yoga/4.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-yoga3{
+  background-image: url("../img/works/yoga/8.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-pilates1{
+  background-image: url("../img/works/pilates/1.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-pilates2{
+  background-image: url("../img/works/pilates/2.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-pilates3{
+  background-image: url("../img/works/pilates/3.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-core1{
+  background-image: url("../img/works/core/1.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-core2{
+  background-image: url("../img/works/core/2.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}
+
+.bg-top-core3{
+  background-image: url("../img/works/core/3.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+  background-position: center; 
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  width: auto;
+
+  margin: 0px;
+}

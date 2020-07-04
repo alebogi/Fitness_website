@@ -37,13 +37,24 @@ function sortByName(){
     tr3.id = arr[2];
 
     //obavestimo
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Uspešno sortirani treninzi po imenu!',
-        showConfirmButton: false,
-        timer: 1200
-    })
+    if(localStorage.getItem("language") == "eng"){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfuly sorted by name!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }else{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Uspešno sortirani treninzi po imenu!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }
+    
 
     byName = 1; byLvl = 0; byDuration = 0;
 }
@@ -102,13 +113,24 @@ function sortByLvl(){
     tr3.id = id3rd;
 
     //obavestimo
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Uspešno sortirani treninzi po težini!',
-        showConfirmButton: false,
-        timer: 1200
-    })
+    if(localStorage.getItem("language") == "eng"){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfuly sorted by difficulty!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }else{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Uspešno sortirani treninzi po težini!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }
+    
 
     byName = 0; byLvl = 1; byDuration = 0;
 }
@@ -166,13 +188,23 @@ function sortByDuration(){
     tr3.id = id3rd;
 
     //obavestimo
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Uspešno sortirani treninzi po trajanju!',
-        showConfirmButton: false,
-        timer: 1200
-    })
+    if(localStorage.getItem("language") == "eng"){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfuly sorted by duration!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }else{
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Uspešno sortirani treninzi po trajanju!',
+            showConfirmButton: false,
+            timer: 1200
+        })
+    }
 
     byName = 0; byLvl = 0; byDuration = 1;
 }

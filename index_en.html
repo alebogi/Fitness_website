@@ -3,12 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inferno gym</title>
+    <title>Inferno | Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-index.css">
     <link rel="shortcut icon" href="img/devil.ico">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index-script.js"></script>
 </head>
-<body>
-    
+<body onload="refreshBestOffers()">
+
+    <div id="wrapper" class="home-page"> 
+
+        <!-- Banners -->
+        <!-- <div class="container-fluid banners">
+            <div class="row justify-content-center">
+                <a href="#" target="_blank">
+                    <img src="">
+                    MESTO ZA VASU REKLAMU
+                </a>                
+            </div>
+        </div> -->
+
+        <!-- start header -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark navFont">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="index_en.html">
+                    
+                    <img class="logo" src="img/logo.png">
+                    &nbsp; INFERNO GYM
+                </a>
+            
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <!-- Links -->
+                    <ul class="navbar-nav  mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active justify-content-center">
+                            <a class="nav-link" href="index_en.html">Home</a>
+                        </li>
+                                    
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown justify-content-center">
+                            <a class="nav-link dropdown-toggle" href="services_en.html" id="navbardrop" data-toggle="dropdown">
+                            Services
+                            </a>
+                            <div class="dropdown-menu justify-content-center bg-dark">
+                            <a class="dropdown-item" href="workouts_en.html">Workouts</a>
+                            <a class="dropdown-item" href="nutricionista_en.html">Nutritionist</a>
+                            <a class="dropdown-item" href="massages_en.html">Massage</a>
+                            </div>
+                        </li>
+        
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="booking_en.html">Schedule a workout</a>
+                        </li>
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="profile_en.html">My account</a>
+                        </li>
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="about_en.html">About us</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0 languages" >
+                        <a href="index.html" onclick="setLanguage('srb')">
+                            <img src="img/flag_srb.png" class="flag" alt="srpski">
+                        </a>
+                        <a href="index_en.html" onclick="setLanguage('eng')">
+                            <img src="img/flag_en.png" class="flag" alt="english">
+                        </a>                    
+                    </div>
+                </div>
+            </nav>
+
+            <section id="inner-headline" class="justify-content-left">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <h2 class="breadcrumbs">
+                                <a href="index_en.html"><i class="fa fa-home" aria-hidden="true"></i> &nbsp; Welcome!</a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+        <section id="indexImg">
+                <div id="main-index-img ">
+                        <img src="img/slides/2.jpg" class="img-index"> 
+                        <div class="main-index-txt col-sm-12">
+                            <p>Sometimes <br/> </p>
+                            <p>    we need to go through <br/> </p>
+                            <p>    HELL <br/> </p>
+                            <p>  in order to become <br/> </p>
+                            <p> heavenly</p>
+                        </div>
+                        
+                </div>
+        </section>  
+
+
+        <div class="container-fluid bestOffer">
+            <div class="row">
+                <div class="col-md-12 justify-content-center text-center">
+                    <h2><b>Our best offers</b></h2>
+                    <br/> 
+                    In a wide range of workouts we offer, here are the best rated ones:
+                    <br/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="card small">
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/works/pilates/4.jpg" alt="">  
+                                <span class="card-title"  id="bestOfferNo1title">Stott pilates</span>
+                            </div>
+                            <div class="card-body"  id="bestOfferNo1body">
+                                STOTT PILATES is a contemporary approach to the original exercise method pioneered by Joseph Pilates. Co-founders Lindsay G. Merrithew and Moira Merrithew, along with a team of physical therapists, sports medicine and fitness professionals, have spent three decades refining the STOTT PILATES method of exercise and equipment. 
+                            </div>
+                            <div class="card-footer">
+                                Rating:
+                                <span  id="bestOfferNo1ocena">5</span>/5
+                            </div>
+                        </div>        
+                </div>
+                <div class="col-md-4 md-margin-bottom-40">
+                        <div class="card small" >
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/service2.jpg" alt="">  
+                                <span class="card-title" id="bestOfferNo2title">Crossfit</span>
+                            </div>
+                            <div class="card-body" id="bestOfferNo2body">
+                                CrossFit is a program developed to offer a full-body workout that combines elements of cardio, weight lifting, gymnastics, core training and more to prepare the body for the unexpected.
+                            </div>
+                            <div class="card-footer">
+                                Rating:
+                                <span  id="bestOfferNo2ocena">5</span>/5
+                            </div>
+                        </div>        
+                </div>
+                <div class="col-md-4 md-margin-bottom-40">
+                    <div class="card small">
+                            <div class="card-image">
+                                 <img class="img-responsive" src="img/service3.jpg" alt="">  
+                                <span class="card-title" id="bestOfferNo3title">Hatha yoga</span>
+                            </div>
+                            <div class="card-body" id="bestOfferNo3body">
+                                Hatha yoga is the branch of yoga that typically comes to mind when you think of yoga in general terms. The practice involves breath, body, and mind, and classes are usually 45 minutes to 90 minutes of breathing, yoga poses, and meditation.
+                            </div>
+                            <div class="card-footer">
+                                Rating:
+                                <span  id="bestOfferNo3ocena">5</span>/5
+                            </div>
+                    </div>        
+                </div> 
+            </div>
+        </div>
+
+          
+        <div class="row">
+            <div class="col-md-12 justify-content-center text-center">
+                <div class="service">
+                    <h2><b>JOIN US!</b></h2>
+                    <br/>
+                    <p id="parService">
+                        Our mission is to inspire and empower. We want people to get to know their bodies. And all that while fighting one of our biggest enemies - stress. We want to excercise with professionals, but also with newcomers. We want to show that everyone is capable of working out. 
+                    </p>
+                </div>
+                <br/>
+            </div>
+        </div>
+
+
+        <footer>
+                
+            <div id="sub-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright d-flex p-2 justify-content-center  align-items-center">
+                                <p>
+                                    <span>&copy; Copyright 2020, Aleksandra Bogićević i Nikola Miličević, Department of Software Engineering, School of Electrical Engineering University of Belgrade </span> 
+                                </p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

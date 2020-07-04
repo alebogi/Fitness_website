@@ -499,7 +499,20 @@ function showTable(id_tr){
 
                 //dan
                 td = $("<td></td>");
-                td.append(termin.dan);
+                var prevod;
+                if(localStorage.getItem("language") == "eng"){
+                    switch(termin.dan){
+                      case "Pon": prevod = "Mon"; break;
+                      case "Uto": prevod = "Tue"; break;
+                      case "Sre": prevod = "Wen"; break;
+                      case "Čet": prevod = "Thr"; break;
+                      case "Pet": prevod = "Fri"; break;
+                      case "Sub": prevod = "Sat"; break;
+                      case "Ned": prevod = "Sun"; break;
+                    }
+                    td.append(prevod);
+                }else
+                  td.append(termin.dan);
                 tr.append(td);
 
                 //vreme
@@ -520,7 +533,10 @@ function showTable(id_tr){
                     var btn = document.createElement("BUTTON");   // Create a <button> element
                     btn.type = "button";
                     btn.className = "btn resBtn";
-                    btn.innerHTML = "Rezerviši";                   // Insert text
+                    if(localStorage.getItem("language") == "eng"){
+                        btn.innerHTML = "Reserve";
+                    }else
+                        btn.innerHTML = "Rezerviši";                   // Insert text
                     btn.id = idBtn;
                                         
                     td.append(btn);
@@ -608,12 +624,22 @@ function reserve(){
     showTable(tr);
 
     //obavesti korisnika
-    Swal.fire({
-        icon: 'success',
-        title: 'Vidimo se! :)',
-        text: 'Uspešno ste zakazali trening.',
-        confirmButtonColor: 'green'
-    })
+    if(localStorage.getItem("language") == "eng"){
+        Swal.fire({
+            icon: 'success',
+            title: 'See you! :)',
+            text: 'You have successfully scheduled your training.',
+            confirmButtonColor: 'green'
+        })
+    }else{
+        Swal.fire({
+            icon: 'success',
+            title: 'Vidimo se! :)',
+            text: 'Uspešno ste zakazali trening.',
+            confirmButtonColor: 'green'
+        })
+    }
+   
 
     rez.tip_tr = tip_tr;
     rez.tr_id = tr;
@@ -642,7 +668,7 @@ function reserve(){
 
 
 
-//--------------------------------------?????????????????????
+//--------------------------------------
 function getDates(day, time){
     var tr_day = day;
     var tr_startTime = time;

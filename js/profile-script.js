@@ -81,6 +81,17 @@ function showBooked(){
     // var yyyy = dateOfTr.getFullYear();
     // var day = dateOfTr.getDay();
     // dateOfTrStr = rezervacija.dan + " " + dd + '/' + mm + '/' + yyyy;
+    if(localStorage.getItem("language") == "eng"){
+      switch(rezervacija.dan){
+        case "Pon": rezervacija.dan = "Mon"; break;
+        case "Uto": rezervacija.dan = "Tue"; break;
+        case "Sre": rezervacija.dan = "Wen"; break;
+        case "Čet": rezervacija.dan = "Thr"; break;
+        case "Pet": rezervacija.dan = "Fri"; break;
+        case "Sub": rezervacija.dan = "Sat"; break;
+        case "Ned": rezervacija.dan = "Sun"; break;
+      }
+    }
     dateOfTrStr = rezervacija.dan + " " + rezervacija.datum;
     td.append(dateOfTrStr);
     tr.append(td);
@@ -98,7 +109,10 @@ function showBooked(){
     var btn = document.createElement("BUTTON");   // Create a <button> element
     btn.type = "button";
     btn.className = "btn cancelBtn";
-    btn.innerHTML = "Otkaži";                   // Insert text
+    if(localStorage.getItem("language") == "eng"){
+      btn.innerHTML = "Cancel";
+    }else
+      btn.innerHTML = "Otkaži";                   // Insert text
     btn.id = idBtn;
     
     td.append(btn);
@@ -320,22 +334,41 @@ function cancelReservation(){
 
     localStorage.setItem("reservations", JSON.stringify(rezArr));
      //obavesti korisnika
-     Swal.fire({
-      icon: 'success',
-      title: 'Uspešno ste otkazali trening.',
-      text: 'Žao nam je što ne dolazite :(',
-      confirmButtonColor: 'green'
-    })
+     if(localStorage.getItem("language") == "eng"){
+      Swal.fire({
+        icon: 'success',
+        title: 'You have successfully canceled the appointment.',
+        text: 'We are sorry that you are not coming :(',
+        confirmButtonColor: 'green'
+      })
+     }else{
+      Swal.fire({
+        icon: 'success',
+        title: 'Uspešno ste otkazali trening.',
+        text: 'Žao nam je što ne dolazite :(',
+        confirmButtonColor: 'green'
+      })
+     }
     otkazano=1;
     showBooked();
   }else{
      //obavesti korisnika
-     Swal.fire({
-      icon: 'error',
-      title: 'Neuspešno!',
-      text: 'Trening može da se otkaže najmanje 30 minuta pre početka istog. ',
-      confirmButtonColor: 'red'
-  })
+     if(localStorage.getItem("language") == "eng"){
+      Swal.fire({
+        icon: 'error',
+        title: 'Unsuccessful!',
+        text: 'Training can be canceled at least 30 minutes before the start. ',
+        confirmButtonColor: 'red'
+    })
+     }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Neuspešno!',
+        text: 'Trening može da se otkaže najmanje 30 minuta pre početka istog. ',
+        confirmButtonColor: 'red'
+      })
+     }
+     
   }
    
 }
@@ -343,27 +376,55 @@ function cancelReservation(){
 
 function logOut(){
 
+  if(localStorage.getItem("language") == "eng"){
     Swal.fire({
-        title: 'Da li ste sigurni?',
-        text: "Ne možete se zaista izlogovati, ali potvrdom uspevate da osvežite sesiju i da poništite prethodno sačuvane informacije.",
-        icon: 'warning',
-        showCancelButton: true,
-        cancelButtonText: 'Odustani',
-        confirmButtonColor: 'green',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Da, osveži sesiju!'
-      }).then((result) => {
-        if (result.value) {
-          localStorage.clear();
-          Swal.fire(
-            'Sesija osvežena',
-            'Uspešno ste obrisali prethodne informacije o sačuvanim treninzima',
-            'success'
-          )
-        }
-      })
+      title: 'Are you sure?',
+      text: "You cannot really logout, but with confirmation you manage to refresh the session and cancel the previously saved information.",
+      icon: 'warning',
+      showCancelButton: true,
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: 'green',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirm!'
+    }).then((result) => {
+      if (result.value) {
+        localStorage.clear();
+        Swal.fire(
+          'Session refreshed',
+          'You have successfully deleted previous information about saved workouts',
+          'success'
+        )
+        localStorage.setItem("language", "eng");
+      }
+    })
 
-    localStorage.clear();
+    
+  }else{
+    Swal.fire({
+      title: 'Da li ste sigurni?',
+      text: "Ne možete se zaista izlogovati, ali potvrdom uspevate da osvežite sesiju i da poništite prethodno sačuvane informacije.",
+      icon: 'warning',
+      showCancelButton: true,
+      cancelButtonText: 'Odustani',
+      confirmButtonColor: 'green',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Da, osveži sesiju!'
+    }).then((result) => {
+      if (result.value) {
+        localStorage.clear();
+        Swal.fire(
+          'Sesija osvežena',
+          'Uspešno ste obrisali prethodne informacije o sačuvanim treninzima',
+          'success'
+        )
+        localStorage.setItem("language", "eng");
+      }
+    })
+  }
+
+    
+
+    
 
     
 }

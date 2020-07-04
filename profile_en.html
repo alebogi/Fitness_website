@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno | My account</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-profile.css">
+    <link rel="shortcut icon" href="img/devil.ico">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/profile-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body onload="showBooked()" >
+    <div id="wrapper" class="home-page"> 
+
+        <!-- Banners -->
+        <!-- <div class="container-fluid banners">
+            <div class="row justify-content-center">
+                <a href="#" target="_blank">
+                    <img src="">
+                    MESTO ZA VASU REKLAMU
+                </a>                
+            </div>
+        </div> -->
+
+        <!-- start header -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark navFont">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="index_en.html">
+                    
+                    <img class="logo" src="img/logo.png">
+                    &nbsp; INFERNO GYM
+                </a>
+            
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <!-- Links -->
+                    <ul class="navbar-nav  mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="index_en.html">Home</a>
+                        </li>
+                                    
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown justify-content-center">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Services
+                            </a>
+                            <div class="dropdown-menu justify-content-center bg-dark">
+                            <a class="dropdown-item" href="workouts_en.html">Workouts</a>
+                            <a class="dropdown-item" href="nutricionista_en.html">Nutritionist</a>
+                            <a class="dropdown-item" href="massages_en.html">Massage</a>
+                            </div>
+                        </li>
+        
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="booking_en.html">Schedule a workout</a>
+                        </li>
+                        <li class="nav-item active justify-content-center">
+                            <a class="nav-link" href="profile_en.html">My account</a>
+                        </li>
+                        <li class="nav-item justify-content-center">
+                            <a class="nav-link" href="about_en.html">About us</a>
+                        </li>
+                    </ul>
+                    <div class="my-2 my-lg-0 languages" >
+                        
+                        <a href="profile.html" onclick="setLanguage('srb')">
+                            <img src="img/flag_srb.png" class="flag" alt="srpski">
+                        </a>
+                        <a href="profile_en.html" onclick="setLanguage('eng')">
+                            <img src="img/flag_en.png" class="flag" alt="english">
+                        </a>  
+                        <a href="#" onclick="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>Log out</a>                  
+                    </div>
+                </div>
+            </nav>
+            <section id="inner-headline">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="breadcrumbs">
+                                <a href="index_en.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                <a href="profile_en.html">My account</a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <div class="jumbotron jumbotron-fluid bg-dark text-center">
+            <div class="container">
+                <h1 id="jumbotronTxt">My account</h1>
+            </div>
+        </div>
+
+       <div class="container-fluid">
+            <div class="row profile-bg">
+               
+                <div class="col-sm-12 col-lg-8 offset-sm-0 offset-lg-2 bg-main main">
+                    <div class="row info">
+                        <div class="col-sm-12 col-md-6 col-lg-6 text-center">
+                            <img src="img/client.jpg" height="250px" width="300px">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 justify-content-left">
+                            <span style="color: white;"><i class="fa fa-user" aria-hidden="true"></i> &nbsp; Informations</span> <br/>
+                            <table class="table table-responsive">
+                                <tr>
+                                    <td>Name:</td>
+                                    <td id="ime">Maja</td>
+                                </tr>
+                                <tr>
+                                    <td>Surname:</td>
+                                    <td id="prezime">Vukasović</td>
+                                </tr>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td id="username">maja_93</td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail:</td>
+                                    <td id="mail">maja@etf.bg.ac.rs</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>   
+                    <div class="row booked table-responsive">
+                        <h2 style="color: white;">Scheduled workouts</h2>
+                        <table class="table text-center " id="tableBooked">
+                            <thead style="color: rgb(171, 33, 23);">
+                                <th>Training</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Cancel</th>
+                            </thead>
+                        </table>
+                        <span id="table-empty" style="color: rgb(171, 33, 23);">You don't have any scheduled workouts. </span>
+                        <br/><br/>
+                    </div>
+                </div>
+
+            </div>
+       </div>
+
+        <footer>
+                
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright d-flex p-2 justify-content-center  align-items-center">
+                                <p>
+                                    <span>&copy; Copyright 2020, Aleksandra Bogićević i Nikola Miličević, Department of Software Engineering, School of Electrical Engineering University of Belgrade </span> 
+                                </p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

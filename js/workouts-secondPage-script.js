@@ -76,7 +76,7 @@ function komentarisiCrossfit(){
             localStorage.setItem("komentariCrossfit", JSON.stringify(nizComms));
         }
     }  else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -143,10 +143,10 @@ function ocena(val){
             localStorage.setItem(stringTrening[0], JSON.stringify(grupaTr));
             localStorage.setItem(provera+"ocenjen", "1");
         } else { 
-            alert("Niste bili na treningu, nema ocenjivanja!");
+            alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         }
     } else {
-        alert("Ocenili ste trening, molimo Vas ne smarajte vise");
+        alert("Ocenili ste trening, molimo Vas ne smarajte vise. / You've already rated this workout!");
     }
 
 }
@@ -192,7 +192,7 @@ function komentarisiCardiobox(){
             localStorage.setItem("komentariCardiobox", JSON.stringify(nizComms));
         }
     }  else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -263,7 +263,7 @@ function komentarisiHiit(){
             localStorage.setItem("komentariHiit", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -334,7 +334,7 @@ function komentarisiCircuit(){
             localStorage.setItem("komentariCircuit", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -404,7 +404,7 @@ function komentarisiSixpack(){
             localStorage.setItem("komentariSixpack", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -474,7 +474,7 @@ function komentarisiPlyometrics(){
             localStorage.setItem("komentariPlyometrics", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -545,7 +545,7 @@ function komentarisiClassic(){
             localStorage.setItem("komentariClassic", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -615,7 +615,7 @@ function komentarisiStot(){
             localStorage.setItem("komentariStot", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -684,7 +684,7 @@ function komentarisiReformer(){
             localStorage.setItem("komentariReformer", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -753,7 +753,7 @@ function komentarisiAshtanga(){
             localStorage.setItem("komentariAshtanga", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -823,7 +823,7 @@ function komentarisiHatha(){
             localStorage.setItem("komentariHatha", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
@@ -892,7 +892,7 @@ function komentarisiRaja(){
             localStorage.setItem("komentariRaja", JSON.stringify(nizComms));
         }
     } else {
-        alert("Niste bili na treningu, nema komentarisanja!");
+        alert("Niste bili na treningu, nema komentarisanja! / You weren't on this workout, you can't rate it!");
         document.getElementById("komentar").value="";
     }
 }
